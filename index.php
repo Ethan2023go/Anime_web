@@ -66,105 +66,89 @@
 
     <!-- news -->
     <div class="news">
-      <div class="xd"></div>
+      <!-- <div class="xd"></div> -->
       <!-- 為了背景 -->
 
-      <div class="card1">
-        <div class="row g-0 border border-light bg-light border-4 rounded-end">
-          <div class="col-md-4">
-            <img src="./imgs/monster_hunter.jpg" class="img-fluid float-end" alt="...">
+        <div class="card1 col">
+          <div class="card">
+            <img src="./imgs/monster_hunter.jpg" class="card-img-top border border-light border-4 rounded-end" alt="...">
+            <div class="card-body border-light border-4">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
           </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Monster Hunter</h5>
-              <p class="card-text">好玩遊戲1</p>
-              <p class="card-text"><small class="text-muted">介紹阿 老鬼</small></p>
+        </div>
+
+
+
+      
+        <div class="card2 col">
+          <div class="card">
+            <img src="./imgs/monster_hunter.jpg" class="card-img-top border border-light border-4 rounded-end" alt="...">
+            <div class="card-body border-light border-4">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      
+
+
+        <div class="card3 col">
+          <div class="card ">
+            <img src="./imgs/monster_hunter.jpg" class="card-img-top border border-light border-4 rounded-end" alt="...">
+            <div class="card-body border-light border-4">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card4 col">
+          <div class="card ">
+            <img src="./imgs/monster_hunter.jpg" class="card-img-top border border-light border-4 rounded-end" alt="...">
+            <div class="card-body border-light border-4">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
           </div>
         </div>
       </div>
 
 
-      <div class="card2">
-        <div class="row g-0 border border-light bg-light border-4 rounded-end">
-          <div class="col-md-4">
-            <img src="./imgs/monster_hunter.jpg" class="img-fluid float-end" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Monster Hunter</h5>
-              <p class="card-text">好玩遊戲1</p>
-              <p class="card-text"><small class="text-muted">介紹阿 老鬼</small></p>
-            </div>
-          </div>
+
+
+
+      <!-- picture -->
+      <div class="picture">
+
+        <div class="option">
+          <img id="img" src="image1.png">
+
+          <button class="btn btn-primary" id="btn1" onclick="changeImg('image1.png')">图片1</button>
+          <button onclick="changeImg('image2.png')">图片2</button>
+          <button type="button"></button>
+          <button type="button"></button>
+          <button type="button"></button>
         </div>
+
       </div>
 
 
-      <div class="card3 ">
-        <div class="row g-0 border border-light bg-light border-4 rounded-end  ">
-          <div class="col-md-4">
-            <img src="./imgs/monster_hunter.jpg" class="img-fluid float-end" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Monster Hunter</h5>
-              <p class="card-text">好玩遊戲1</p>
-              <p class="card-text"><small class="text-muted">介紹阿 老鬼</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    
+      <!-- video -->
+      <div class="video">
 
-      <div class="card4">
-        <div class="row g-0 border border-light bg-light border-4 rounded-end">
-          <div class="col-md-4">
-            <img src="./imgs/monster_hunter.jpg" class="img-fluid float-end" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Monster Hunter</h5>
-              <p class="card-text">好玩遊戲1</p>
-              <p class="card-text"><small class="text-muted">介紹阿 老鬼</small></p>
-            </div>
-          </div>
-        </div>
+
       </div>
+
+
+      <!-- foot -->
+      <div class="foot">
+
+      </div>
+
     </div>
- 
- 
-
-
-  <!-- picture -->
-  <div class="picture">
-
-    <div class="option">
-      <img id="img" src="image1.png">
-
-      <button class="btn btn-primary" id="btn1" onclick="changeImg('image1.png')">图片1</button>
-      <button onclick="changeImg('image2.png')">图片2</button>
-      <button type="button"></button>
-      <button type="button"></button>
-      <button type="button"></button>
-    </div>
-
-  </div>
-
-
-  <!-- video -->
-  <div class="video">
-
-  
-  </div>
-
-
-  <!-- foot -->
-  <div class="foot">
-
-  </div>
-
-  </div>
 </body>
 
 
@@ -172,29 +156,30 @@
 <script>
   // let elem = document.getElementById("btn1"); 
 
-// 　function moveLeft() {
-// 　  elem.style.left = parseInt(elem.style.left) - 10 + 'px';
-// 　}
+  // 　function moveLeft() {
+  // 　  elem.style.left = parseInt(elem.style.left) - 10 + 'px';
+  // 　}
 
-// 获取需要移动的元素
-let elem = document.getElementById("btn1");
+  // 获取需要移动的元素
+  let elem = document.getElementById("btn1");
 
-// 定义移动元素的函数
-function moveLeft() {
+  // 定义移动元素的函数
+  function moveLeft() {
 
-  // 获取元素当前的 left 值,并转换为数字类型
-  let currentLeft = parseInt(elem.style.left); 
-  
-  // 左移10px,可以根据需要调整移动的距离
-  let newLeft = currentLeft - 100;
+    // 获取元素当前的 left 值,并转换为数字类型
+    let currentLeft = parseInt(elem.style.left);
 
-  // 将计算后的左侧位置赋值给元素
-  elem.style.left = newLeft + 'px'; 
+    // 左移10px,可以根据需要调整移动的距离
+    let newLeft = currentLeft - 100;
 
-}
+    // 将计算后的左侧位置赋值给元素
+    elem.style.left = newLeft + 'px';
 
-// 调用moveLeft函数后,元素就会向左移动了
+  }
+
+  // 调用moveLeft函数后,元素就会向左移动了
 </script>
+
 </html>
 <?php
 
