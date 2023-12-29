@@ -2,7 +2,7 @@
     height: 300vh;
     width: 100vw;
     background-size: cover;
-    background-color: 	#FFD1A4;    
+    /* background-color: 	#FFD1A4; */
 }
 .man{
     width: 70px;
@@ -12,10 +12,12 @@
 }
 
 .animation_wall{
-  width:100%;
+  width:80%;
   height: 550px;
   display: flex;
   justify-content: center;
+  margin: auto;
+  margin-top: 10px;
   /* align-items: center; */
   background-image: url(../imgs/background5.png);
   box-shadow: 0 0 0 1px #FFDAC8, 0 0 10px rgba(0,0,0,1);
@@ -42,7 +44,7 @@ width: 1400px;
     border-radius: 10px; 
     box-shadow: 0 0 0 5px #fff, 0 0 10px rgba(0,0,0.5,0.5);
     margin: auto;
-    margin-top: 63px;
+    margin-top: 100px;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
@@ -74,3 +76,4 @@ width: 1400px;
     height: 200px;
     margin-top: 10px;
 }
+

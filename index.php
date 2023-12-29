@@ -102,7 +102,7 @@
 
 
       <div class="card3 ">
-        <div class="row g-0 border border-light bg-light border-4 rounded-end">
+        <div class="row g-0 border border-light bg-light border-4 rounded-end  ">
           <div class="col-md-4">
             <img src="./imgs/monster_hunter.jpg" class="img-fluid float-end" alt="...">
           </div>
@@ -142,7 +142,7 @@
     <div class="option">
       <img id="img" src="image1.png">
 
-      <button onclick="changeImg('image1.png')">图片1</button>
+      <button class="btn btn-primary" id="btn1" onclick="changeImg('image1.png')">图片1</button>
       <button onclick="changeImg('image2.png')">图片2</button>
       <button type="button"></button>
       <button type="button"></button>
@@ -155,6 +155,7 @@
   <!-- video -->
   <div class="video">
 
+  
   </div>
 
 
@@ -166,6 +167,34 @@
   </div>
 </body>
 
+
+
+<script>
+  // let elem = document.getElementById("btn1"); 
+
+// 　function moveLeft() {
+// 　  elem.style.left = parseInt(elem.style.left) - 10 + 'px';
+// 　}
+
+// 获取需要移动的元素
+let elem = document.getElementById("btn1");
+
+// 定义移动元素的函数
+function moveLeft() {
+
+  // 获取元素当前的 left 值,并转换为数字类型
+  let currentLeft = parseInt(elem.style.left); 
+  
+  // 左移10px,可以根据需要调整移动的距离
+  let newLeft = currentLeft - 100;
+
+  // 将计算后的左侧位置赋值给元素
+  elem.style.left = newLeft + 'px'; 
+
+}
+
+// 调用moveLeft函数后,元素就会向左移动了
+</script>
 </html>
 <?php
 
