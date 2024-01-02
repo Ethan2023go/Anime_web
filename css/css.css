@@ -57,9 +57,10 @@ width: 1400px;
     height: 860px;
 }
 .card1{
-    width: 400px;
+    width: 200px;
     height: 200px;
     /* margin-top: 10px; */
+    background-color: black;
 }
 .card2{
     width: 400px;
@@ -75,5 +76,9 @@ width: 1400px;
     width: 400px;
     height: 200px;
     margin-top: 10px;
+}
+.a{
+    width: 100px;
+    height: 100px;
 }
 

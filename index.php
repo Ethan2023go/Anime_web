@@ -56,7 +56,7 @@
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
       <div class="ifr_box">
-        <iframe class="border border-light mt-1" width="1400" height="600" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- <iframe class="border border-light mt-1" width="1400" height="600" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
         <div class="mask">
 
         </div>
@@ -69,15 +69,15 @@
       <!-- <div class="xd"></div> -->
       <!-- 為了背景 -->
 
-        <div class="card1 col">
+        
           <div class="card">
-            <img src="./imgs/monster_hunter.jpg" class="card-img-top border border-light border-4 rounded-end" alt="...">
+            <img src="./imgs/monster_hunter.jpg" class=" card-img-top border border-light border-4 rounded-end" alt="...">
             <div class="card-body border-light border-4">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
           </div>
-        </div>
+        
 
 
 
