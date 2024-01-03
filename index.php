@@ -56,10 +56,10 @@
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
       <div class="ifr_box">
-        <iframe class="border border-light mt-1" width="1400" height="600" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- <iframe class="border border-light mt-1" width="1400" height="600" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="mask">
 
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -115,20 +115,20 @@
 
       <!-- picture -->
       <div class="picture">
-          <img id="pic_img" src="./imgs/pic_bg.png"> 
-        <div class="option">
-         
-          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/Zelda_sword_bg.png')">圖片1</button>
-          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/Zelda_link.jpg')">圖片2</button>
-          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/FINAL 16.jpg')">圖片3</button>
-          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/Zelda_link3.jpg')">圖片4</button>
-          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/Baldurs Gate 3_cha1.jpg')">圖片5</button>
-           
           
+      <img id="pic_img" src=""> 
+        
+        <div class="option"> 
+        <button onclick="changeImg('this.id')">图片1</button>
+        <button onclick="changeImg('image2.png')">图片2</button>
+          <button id="btn1" data-img="">圖片1</button>
+          <button id="btn2" data-img="">圖片2</button>
+          <button id="btn3" data-img="">圖片3</button>
+          <button id="btn4" data-img="">圖片4</button>         
+          <button id="btn5" data-img="">圖片5</button>         
         </div>
         
       </div>
-
 
       <!-- video -->
       <div class="video">
@@ -139,46 +139,54 @@
 
       <!-- foot -->
       <div class="foot">
-
+       
       </div>
 
     </div> 
 </body>
-
+<button onclick="changeImg('this.id')">图片1</button>
 
 
 <script>
 
-function changeImg(imgSrc) {
-  let img = document.getElementById('pic_img');
-  img.src = imgSrc; 
-}
+// function changeImg(imgSrc) {
+//   let img = document.getElementById('img');
+//   img.src = imgSrc; 
+// }
 
 
-  // let elem = document.getElementById("btn1"); 
 
-  // 　function moveLeft() {
-  // 　  elem.style.left = parseInt(elem.style.left) - 10 + 'px';
-  // 　}
 
-  // 获取需要移动的元素
-  let elem = document.getElementById("btn1");
+// let img = $('#pic_img'); 
 
-  // 定义移动元素的函数
-  function moveLeft() {
+// img.hide();
 
-    // 获取元素当前的 left 值,并转换为数字类型
-    let currentLeft = parseInt(elem.style.left);
+// $('#btn1').click(function() {
+//   img.hide();
+//   img.attr('src', './imgs/Zelda_sword.jpg'); 
+//   img.fadeIn(1500);
+// });
 
-    // 左移10px,可以根据需要调整移动的距离
-    let newLeft = currentLeft - 100;
-
-    // 将计算后的左侧位置赋值给元素
-    elem.style.left = newLeft + 'px';
-
-  }
-
-  // 调用moveLeft函数后,元素就会向左移动了
+// $('#btn2').click(function() {
+//   img.hide();
+//   img.attr('src', './imgs/monster_hunter.jpg');
+//   img.fadeToggle(1500);
+// });
+// $('#btn3').click(function() {
+//   img.hide();
+//   img.attr('src', './imgs/Like a Dragon.jpg');
+//   img.fadeToggle(1500);
+// });
+// $('#btn4').click(function() {
+//   img.hide();
+//   img.attr('src', './imgs/FINAL 16.jpg');
+//   img.fadeToggle(1500);
+// });
+// $('#btn5').click(function() {
+//   img.hide();
+//   img.attr('src', './imgs/bg3_party.jpg');
+//   img.fadeToggle(1500);
+// });
 </script>
 
 </html>
