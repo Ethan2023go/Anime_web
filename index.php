@@ -23,7 +23,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <span class="text-white">test</span>
+        
 
         <div class="collapse navbar-collapse " id="navbarsExample03">
           <ul class="navbar-nav  mb-2 mb-sm-0 ms-auto">
@@ -41,7 +41,7 @@
             </li>
           </ul>
           <form class="d-flex ms-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="find your answer!" aria-label="Search">
             <button class="btn btn-outline-light" type="submit"><i class="fa-brands fa-sistrix"></i></button>
           </form>
         </div>
@@ -56,7 +56,7 @@
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
       <div class="ifr_box">
-        <!-- <iframe class="border border-light mt-1" width="1400" height="600" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        <iframe class="border border-light mt-1" width="1400" height="600" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="mask">
 
         </div>
@@ -69,70 +69,64 @@
       <!-- <div class="xd"></div> -->
       <!-- 為了背景 -->
 
-        
-          <div class="card">
-            <img src="./imgs/monster_hunter.jpg" class=" card-img-top border border-light border-4 rounded-end" alt="...">
-            <div class="card-body border-light border-4">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        
-
-
-
-      
-        <div class="card2 col">
-          <div class="card">
-            <img src="./imgs/monster_hunter.jpg" class="card-img-top border border-light border-4 rounded-end" alt="...">
-            <div class="card-body border-light border-4">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
+      <div class="card_all">
+     
+      <div class="card2">
+        <div class="card_img">
+        <img class="C_img_size" src="./imgs/dark_souls.jpg" alt="">
         </div>
-      
-
-
-        <div class="card3 col">
-          <div class="card ">
-            <img src="./imgs/monster_hunter.jpg" class="card-img-top border border-light border-4 rounded-end" alt="...">
-            <div class="card-body border-light border-4">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+          <div class="card_body">
+            大顆壽司
           </div>
+       </div>
+
+
+       <div class="card2">
+        <div class="card_img">
+        <img class="C_img_size" src="./imgs/zelda_mark.jpg" alt="">
         </div>
-
-
-        <div class="card4 col">
-          <div class="card ">
-            <img src="./imgs/monster_hunter.jpg" class="card-img-top border border-light border-4 rounded-end" alt="...">
-            <div class="card-body border-light border-4">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+          <div class="card_body">
+            薩神
           </div>
+       </div>
+       
+       <div class="card3">
+        <div class="card_img">
+        <img class="C_img_size" src="./imgs/monster_world.jpg" alt="">        </div>
+        <div class="card_body">
+          魔物獵人
         </div>
-      </div>
+       </div>
 
+       <div class="card4">
+        <div class="card_img">
+        <img class="C_img_size" src="./imgs/resident evil4.jpg" alt="">        </div>
+        <div class="card_body">
+        經典惡靈古堡
+        </div>
+       </div>
+
+
+      </div> 
+    </div>
 
 
 
 
       <!-- picture -->
       <div class="picture">
-
+          <img id="pic_img" src="./imgs/pic_bg.png"> 
         <div class="option">
-          <img id="img" src="image1.png">
-
-          <button class="btn btn-primary" id="btn1" onclick="changeImg('image1.png')">图片1</button>
-          <button onclick="changeImg('image2.png')">图片2</button>
-          <button type="button"></button>
-          <button type="button"></button>
-          <button type="button"></button>
+         
+          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/Zelda_sword_bg.png')">圖片1</button>
+          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/Zelda_link.jpg')">圖片2</button>
+          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/FINAL 16.jpg')">圖片3</button>
+          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/Zelda_link3.jpg')">圖片4</button>
+          <button class="btn btn-primary" id="btn1" onclick="changeImg('./imgs/Baldurs Gate 3_cha1.jpg')">圖片5</button>
+           
+          
         </div>
-
+        
       </div>
 
 
@@ -148,12 +142,19 @@
 
       </div>
 
-    </div>
+    </div> 
 </body>
 
 
 
 <script>
+
+function changeImg(imgSrc) {
+  let img = document.getElementById('pic_img');
+  img.src = imgSrc; 
+}
+
+
   // let elem = document.getElementById("btn1"); 
 
   // 　function moveLeft() {
