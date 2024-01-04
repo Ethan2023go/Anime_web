@@ -11,13 +11,12 @@
 
 
 <!-- 定義按鈕元素,並綁定點擊事件呼叫 changeImg 函數 -->
-<div class="btn" id="a" data-img="https://picsum.photos/id/237/500/300" onclick='changeImg(this.id)'>123</div>
-<div class="btn" id="b" data-img="https://picsum.photos/id/239/500/300" onclick=' changeImg(this.id)'>456</div>
-<div class="btn" id="c" data-img="https://picsum.photos/id/238/500/300" onclick='changeImg(this.id)'>789</div>
+<button class="btn" id="btn1" data-img="./imgs/Zelda_mina.png" onclick='changeImg(this.id)'>1</button>
+<button class="btn" id="btn2" data-img="./imgs/FINAL_16.png" onclick=' changeImg(this.id)'>2</button>
+<button class="btn" id="btn3" data-img="./imgs/Baldurs Gate 3_cha_2.jpg" onclick='changeImg(this.id)'>3</button>
 
 <!--圖片元素 -->
 <img src="" alt="" id="pic_img">
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
 integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -34,7 +33,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     // }
 
-    // 定義臨時變量儲存上次點擊的id和隱藏狀態
+    // 定義儲存上次點擊的id和隱藏狀態
     let tmpId = "";
     let tmpHide = 0;
 
@@ -73,16 +72,13 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                 setTimeout(() => {
                     $("#pic_img").attr("src", `${imgData}`)
 
-                }, 1500);
-                setTimeout(()=>{
-                    $("#pic_img").fadeIn(2000);
-                },3000)
-                // $("#pic_img").fadeIn(2000);
+                }, 1000);
+                $("#pic_img").fadeIn(2000);
 
 
             });
             
-           // 重置臨時變量
+           // 重置
             tmpId = "";
             tmpHide = 0;
         }

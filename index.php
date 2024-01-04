@@ -119,17 +119,14 @@
       <img id="pic_img" src=""> 
         
         <div class="option"> 
-        <button onclick="changeImg('this.id')">图片1</button>
-        <button onclick="changeImg('image2.png')">图片2</button>
-          <button id="btn1" data-img="">圖片1</button>
-          <button id="btn2" data-img="">圖片2</button>
-          <button id="btn3" data-img="">圖片3</button>
-          <button id="btn4" data-img="">圖片4</button>         
-          <button id="btn5" data-img="">圖片5</button>         
+        <button class="btn btn-info" id="btn1" data-img="./imgs/Zelda_mina.png" onclick='changeImg(this.id)'>1</button>
+        <button class="btn btn-info" id="btn2" data-img="./imgs/FINAL_16.png" onclick=' changeImg(this.id)'>2</button>
+        <button class="btn btn-info" id="btn3" data-img="./imgs/Baldurs Gate 3_cha_2.jpg" onclick='changeImg(this.id)'>3</button>      
+        <button class="btn btn-info" id="btn4" data-img="./imgs/final_family.jpg" onclick='changeImg(this.id)'>4</button>      
+        <button class="btn btn-info" id="btn5" data-img="./imgs/Alan Wake 2.jpg" onclick='changeImg(this.id)'>5</button>      
         </div>
         
       </div>
-
       <!-- video -->
       <div class="video">
 
@@ -144,49 +141,66 @@
 
     </div> 
 </body>
-<button onclick="changeImg('this.id')">图片1</button>
 
 
 <script>
 
-// function changeImg(imgSrc) {
-//   let img = document.getElementById('img');
-//   img.src = imgSrc; 
-// }
+  // 定義儲存上次點擊的id和隱藏狀態
+    let tmpId = "";
+    let tmpHide = 0;
+
+    // 更改圖片的函數
+    function changeImg(id) {
+        // 獲取data-img圖片路徑
+        let imgData = document.getElementById(id).dataset.img;
+        console.log(imgData);
+        // console.log(tmpHide);
+        // console.log(id);
+        // console.log(tmpId);
+        
+        // 判斷當前id是否與上次點擊相同
+        if (id == tmpId) {
+            // 如果相同則進行顯示/隱藏切換
+            if (tmpHide == 1) {
+                $(document).ready(function () {
+                    $("#pic_img").fadeOut(2000);
+                    tmpHide = 0;
+                });
+            } else {
+                $(document).ready(function () {
+                    $("#pic_img").fadeIn(2000);
+                });
+                tmpHide = 1;
+            }
+
+        } else {
+             // 如果不同,先淡入
+             $("#pic_img").fadeIn(1000);
+             
+            $(document).ready(function () {
+
+                // 再替換圖片並淡出
+                $("#pic_img").fadeOut(2000);
+                setTimeout(() => {
+                    $("#pic_img").attr("src", `${imgData}`)
+
+                }, 1000);
+                $("#pic_img").fadeIn(2000);
 
 
+            });
+            
+           // 重置
+            tmpId = "";
+            tmpHide = 0;
+        }
+
+        // 儲存當前id
+        tmpId = id;
+        
+    }
 
 
-// let img = $('#pic_img'); 
-
-// img.hide();
-
-// $('#btn1').click(function() {
-//   img.hide();
-//   img.attr('src', './imgs/Zelda_sword.jpg'); 
-//   img.fadeIn(1500);
-// });
-
-// $('#btn2').click(function() {
-//   img.hide();
-//   img.attr('src', './imgs/monster_hunter.jpg');
-//   img.fadeToggle(1500);
-// });
-// $('#btn3').click(function() {
-//   img.hide();
-//   img.attr('src', './imgs/Like a Dragon.jpg');
-//   img.fadeToggle(1500);
-// });
-// $('#btn4').click(function() {
-//   img.hide();
-//   img.attr('src', './imgs/FINAL 16.jpg');
-//   img.fadeToggle(1500);
-// });
-// $('#btn5').click(function() {
-//   img.hide();
-//   img.attr('src', './imgs/bg3_party.jpg');
-//   img.fadeToggle(1500);
-// });
 </script>
 
 </html>
