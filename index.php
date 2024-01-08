@@ -56,10 +56,10 @@
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
       <div class="ifr_box">
-        <!-- <iframe class="border border-light mt-1" width="1400" height="600" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="border border-light mt-1" width="1400" height="600" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="mask">
 
-        </div> -->
+        </div>
       </div>
     </div>
 
@@ -127,10 +127,10 @@
         </div>
         
       </div>
-      <!-- video -->
-      <div class="video">
-
-
+      <!-- vote-->
+      <div class="vote">
+      <div class="">Everybody Top 10 anime!</div>
+            
       </div>
 
 
