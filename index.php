@@ -19,6 +19,12 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
       <div class="container-fluid">
         <a href="#"><img class="man" src="./imgs/logo.png" alt="" srcset=""></a>
+        
+        <div class="a123">
+        <a class="link" href="">最新消息</a>
+        <a class="link" href="">遊戲畫面鑑賞</a>
+        <a class="link" href="">票選活動</a>
+        </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -56,7 +62,7 @@
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
       <div class="ifr_box">
-        <iframe class="border border-light mt-1" width="100%" height="100%" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- <iframe class="border border-light mt-1" width="100%" height="100%" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
         <div class="mask">
 
         </div>
