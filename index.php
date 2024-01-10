@@ -43,7 +43,7 @@
               </ul>
             </li>
             <li class="login">
-              <a class="nav-link bg-danger" href="#">登入</a>
+              <a class="nav-link bg-danger" onclick="">登入</a>
             </li>
           </ul>
           <form class="d-flex ms-3" role="search">
@@ -218,6 +218,17 @@
     tmpId = id;
 
   }
+
+
+
+  function op(border,content,url)
+{
+	$(border).fadeIn()
+	if(content)
+	$(content).fadeIn()
+	if(content&&url)
+	$(content).load(url)
+}
 </script>
 
 </html>

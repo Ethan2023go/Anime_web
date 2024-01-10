@@ -1,6 +1,6 @@
 .top_nav{
     width: 100%;
-    height:40px;
+    height:60px;
     background-color:#C1D2DD; 
     position: relative;   
 }
@@ -9,22 +9,96 @@
     height: 40px;
     background-color:#CED9DC ;
     position: absolute;
-    left:1845px;
+    left:89%;
+    top:10px;
     border-radius: 10px;
+    border-color: #D7B98E;
     font-size: 25px;
+    color:#6E552F;
 }
 .navBtn:hover{
     background-color:#5ACCE1;
 }
 .slide_nav{
     width: 100%;
-    height: 120px;
+    height: 70px;
     background-color:#C1D2DD ;
     display: none;
 }
 .dash_btn{
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Comic Sans MS;
     position: absolute;
-    left: 100px;
+    left: 83%;
+    top:10px;
+    color:#6E552F;
+    background-color:#dce6ec ;
+    border-color: #D7B98E;
 }
-
+.dash_btn:hover{
+    background-color:#5ACCE1;
+}
+.a_text{
+    display: flex;
+    flex-direction: column;
+}
+.a_tag{
+    text-decoration: none;
+    margin-top: 44px;
+    font-size: 20px;
+    color:#43341B;
+    font-weight: 600;
+}
+.a_tag:hover{
+    color:#66BAB7;
+}
+.offcanvas{
+    width:290px !important;
+}
+.main_control{
+    width: 100%;
+    height: 80vh;
+    margin-top: 35px;
+    /* background-color: lightcoral; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    width: 1000px;
+    height: 670px;
+    background-color:#e5f6fa;
+    border-style:outset;
+    border-width: 5px;
+    border-radius: 10px;
+}
+.logout{
+    height: 40px;
+    position: absolute;
+    left:95%;
+    top:10px;
+    border-radius: 20px;
+    font-family: "Trebuchet MS";
+    font-size: 20px;
+    color: #211E55;
+    border-color: bisque;
+}
+.logout:hover{
+    color:#D0104C;
+}
+.main_top{
+    width: 100%;
+    height: 100px;
+    background-color: lightsalmon;
+}
+.man{
+    position: relative;
+    width: 66px;
+    height: 58px;
+    left: 1%;
+    margin: 0;
+}
     
+ 

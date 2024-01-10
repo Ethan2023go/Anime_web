@@ -156,3 +156,7 @@ width: 100%;
     color:white;
     text-decoration: none;
 }
+.nav-link:hover{
+    font-weight: 1000;
+    color:#FFFFFF;
+}
