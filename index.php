@@ -13,7 +13,16 @@
 </head>
 
 <body>
+<div id="cover" style="display:none; ">
+		<div id="coverr">
+			<a style="position:absolute; right:10px; top:4px; cursor:pointer; z-index:101; color:aliceblue; font-size:25px; font-family:Arial Black;" onclick="cl('#cover')">X</a>
+			<div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:100;"></div>
+		</div>
+	</div>
   <div class="all ">
+   
+    <!-- modal_set -->
+
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
@@ -42,8 +51,8 @@
                 <li><a class="dropdown-item" href="#">日本語</a></li>
               </ul>
             </li>
-            <li class="login">
-              <a class="nav-link bg-danger" onclick="">登入</a>
+            <li class="login_log">
+              <a class="nav-link bg-danger" onclick="login('#cover','#cvr','./modal/login.php?')" >登入</a>
             </li>
           </ul>
           <form class="d-flex ms-3" role="search">
@@ -221,14 +230,19 @@
 
 
 
-  function op(border,content,url)
-{
-	$(border).fadeIn()
+  function login(border,content,url){
+	
+  $(border).fadeIn()
 	if(content)
 	$(content).fadeIn()
 	if(content&&url)
 	$(content).load(url)
 }
+
+  function cl(border)
+  {
+  	$(border).fadeOut();
+  }
 </script>
 
 </html>
