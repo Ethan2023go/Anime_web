@@ -27,7 +27,8 @@
 .ifr_box{
  width: 100%;
  /* background-color: lightsalmon; */
- position: relative;   
+ position: relative;  
+ top:20px;
 }
 
 .mask{
@@ -169,8 +170,8 @@ width: 100%;
 	z-index:5;
     border-radius: 15px;
 	background:rgba(51,51,51,0.4);
-	top:400px;
-	left:670px;
+	top:300px;
+	left:710px;
 }
 /* #coverr
 {

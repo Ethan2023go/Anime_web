@@ -45,9 +45,9 @@
                 <a class="a_tag" href="">Over view</a>
                 <a class="a_tag" href="?do=account">Account management</a>
                 <a class="a_tag" href="?do=animation">Animation wall</a>
-                <a class="a_tag" href="?do=title">Picture change</a>
-                <a class="a_tag" href="?do=news<">Latest news</a>
-                <a class="a_tag" href="?do=title">Votes</a>
+                <a class="a_tag" href="?do=picture">Picture change</a>
+                <a class="a_tag" href="?do=news">Latest news</a>
+                <a class="a_tag" href="?do=votes">Votes</a>
             </div>
         </div>
     </div>
@@ -58,6 +58,15 @@
           <div class="main_top">
           
           </div>
+         <?php
+         $do=$_GET['do']??'main';
+         $file="./back/{$do}.php";
+         if(file_exists($file)){
+            include $file;
+         }else{
+         include "./back/main.php";
+         }
+        ?>
         </div>
     </div>
 
@@ -67,19 +76,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
+    // 目前無用滑動下拉功能
     $(document).ready(function() {
         const myBtn = $('#myBtn');
         const myBox = $('#back_nav');
         let slide = 0;
 
 
-        myBtn.click(function() {
+        myBtn.hover(function() {
             if (slide == 0) {
-                myBox.slideDown(1000);
+                myBox.slideDown(700);
 
             } else {
 
-                myBox.slideUp(800);
+                myBox.slideUp(400);
             }
             if (slide == 1) {
 

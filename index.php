@@ -71,7 +71,7 @@
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
       <div class="ifr_box">
-        <!-- <iframe class="border border-light mt-1" width="100%" height="100%" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        <iframe class="border border-light mt-1" width="90%" height="100%" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="mask">
 
         </div>
@@ -173,6 +173,7 @@
 
 
 <script>
+  // pic控制
   // 定義儲存上次點擊的id和隱藏狀態
   let tmpId = "";
   let tmpHide = 0;
@@ -227,9 +228,10 @@
     tmpId = id;
 
   }
+  //
 
 
-
+  // login function
   function login(border,content,url){
 	
   $(border).fadeIn()
@@ -243,6 +245,7 @@
   {
   	$(border).fadeOut();
   }
+  // 
 </script>
 
 </html>
