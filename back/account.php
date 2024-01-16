@@ -1,3 +1,28 @@
+<style>
+    .modal_acc{
+        position: relative;
+        width: 100%;
+        z-index: 100;
+        background-color: lightgreen;
+    }
+    #cover{
+        width: 33.3%;
+        height:300px;
+        top:200px;
+        left:33.3%;
+        background-color: lightblue;
+        border-radius: 10px;
+        position: absolute;    
+    }
+    
+    #coverr{
+        width: 100px;
+        height: 200px;
+        background-color: lightcoral;
+    }
+    #cvr{
+    }        
+</style>
 <h2>帳號管理</h2>
 
 <form method="post" action="./api/edit.php">
@@ -10,12 +35,13 @@
                 </tr>
                 <?php
 
-                $rows=$DB->all();
+                $rows=$Acc->all();
                 foreach($rows as $row){
                 ?>
                 <tr>
                     <td>
                         <input type="text" name="acc[]" style="width:90%" value="<?=$row['acc'];?>">
+                         
                     </td>
                     <td>
                         <input type="password" name="pw[]" value="<?=$row['pw'];?>">

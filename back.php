@@ -1,3 +1,4 @@
+<?php include_once "./api/db.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +13,24 @@
 </head>
 
 <body>
+
     <div class="top_nav">
          <!-- logo -->
         <a href="#"><img class="man" src="./imgs/logo.png" alt="" srcset=""></a>
 
         <button class="logout" type="button">logout</button>
+
+
+        <!-- modal_acc -->
+    <div class="modal_acc">
+    <div id="cover" style="display:none; ">
+		<div id="coverr">
+			<a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl('#cover')">X</a>
+			<div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
+ 		</div>
+    </div>
+  </div>
+
 
         <!-- dash_btn -->
         <button class="dash_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">dashbord</button>
@@ -83,7 +97,7 @@
         let slide = 0;
 
 
-        myBtn.hover(function() {
+        myBtn.click(function() {
             if (slide == 0) {
                 myBox.slideDown(700);
 
@@ -101,6 +115,23 @@
         });
 
     });
+
+
+      // login function
+  function op(border,content,url){
+	
+    $(border).fadeIn()
+      if(content)
+      $(content).fadeIn()
+      if(content&&url)
+      $(content).load(url)
+  }
+  
+    function cl(border)
+    {
+        $(border).fadeOut();
+    }
+    // 
 </script>
 
 
