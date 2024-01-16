@@ -3,7 +3,7 @@ date_default_timezone_set("Asia/Taipei");
 session_start();
 class DB{
 
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db02";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname= s1120402";
     protected $pdo;
     protected $table;
 
@@ -145,15 +145,13 @@ function to ($url){
     header("location:$url");
 }
 
-$Title =new DB('title');
-$Total =new DB('total');
-$Bottom =new DB('bottom');
-$Mvim =new DB('mvim');
-$Ad =new DB('ad');
-$Image =new DB('image');
-$News= new DB ('news');
-$Admin= new DB ('admin');
-$Menu= new DB ('menu');
+
+$User =new DB('acc');
+$Animate =new DB('ani');
+$News =new DB('news');
+$Pic =new DB('pic');
+$Votes=new DB ('votes');
+
 
 
 //$tables=array_keys(get_defined_vars());

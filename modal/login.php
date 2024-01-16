@@ -60,7 +60,7 @@
         let pw = $("#pw").val();
 
         // 使用$.post() AJAX請求,檢查帳號
-        $.post("api/login_check.php", {
+        $.post("./api/login_check.php", {
             acc
         }, function(res) {
 
@@ -68,7 +68,7 @@
             if (res == 1) {
 
                 // 再次發送請求,檢查密碼
-                $.post('api/lchkpw.php', {
+                $.post('./api/check_pw.php', {
                     acc,
                     pw
                 }, function(resp) {
@@ -77,7 +77,7 @@
                     if (resp == 1) {
 
                         // 跳轉頁面
-                        location.href = "ss/select.html";
+                        location.href = "./back/main.php";
 
                         // 否則密碼錯誤    
                     } else {
