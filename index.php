@@ -1,3 +1,4 @@
+<?php include_once "./api/db.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,11 +68,19 @@
 
 
     <!-- animation_wall -->
-
+    <?php   
+    $row=$Animation->find(['sh'=>1]);
+    ?>
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
+       <!-- 大部分影片無法自動倫播 之後處理 -->
       <div class="ifr_box">
-        <iframe class="border border-light mt-1" width="90%" height="100%" src="https://www.youtube.com/embed/CMF3qeu7fHY?rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+       
+        <!-- <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&mute=1&controls=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+        <!-- <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&playlist=CMF3qeu7fHY&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
         <div class="mask">
 
         </div>

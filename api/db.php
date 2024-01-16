@@ -144,7 +144,7 @@ function to($url){
 
 $Acc= new DB('acc');
 $Account= new DB('acc');
-$Ani= new DB('ani');
+$Animation= new DB('animation');
 $News= new DB('news');
 $Pic= new DB('pic');
 $Votes= new DB('votes');

@@ -19,7 +19,7 @@ foreach($_POST['id'] as  $key => $id){
             $row['text']=$_POST['text'][$key];
         }
         switch($table){
-            case "title":
+            case "animation":
                 $row['sh']=(isset($_POST['sh']) && $_POST['sh']==$id)?1:0;
             break;
             case "account":

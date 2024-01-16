@@ -6,7 +6,7 @@
         background-color: lightgreen;
     }
     #cover{
-        width: 33.3%;
+        width: 33%;
         height:300px;
         top:200px;
         left:33.3%;
@@ -20,8 +20,9 @@
         height: 200px;
         background-color: lightcoral;
     }
-    #cvr{
-    }        
+    /* #cvr{
+        background-color: lightgoldenrodyellow;
+    }         */
 </style>
 <h2>帳號管理</h2>
 
