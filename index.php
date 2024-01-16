@@ -73,7 +73,7 @@
     ?>
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
-       <!-- 大部分影片無法自動倫播 之後處理 -->
+       <!-- 大部分影片無法自動輪播 之後處理 -->
       <div class="ifr_box">
       <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         
@@ -141,9 +141,10 @@
 
     <!-- picture -->
     <div class="picture">
-
+      <?php
+       $imgs=$Picture->all(['sh'=>1]," order by rank")
+      ?>
       <img id="pic_img" src="">
-
       <div class="option">
         <button class="btn btn-info" id="btn1" data-img="./imgs/Zelda_mina.png" onclick='changeImg(this.id)'>1</button>
         <button class="btn btn-info" id="btn2" data-img="./imgs/FINAL_16.png" onclick=' changeImg(this.id)'>2</button>

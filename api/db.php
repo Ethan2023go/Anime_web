@@ -146,7 +146,7 @@ $Acc= new DB('acc');
 $Account= new DB('acc');
 $Animation= new DB('animation');
 $News= new DB('news');
-$Pic= new DB('pic');
+$Picture= new DB('pic');
 $Votes= new DB('votes');
 
 ?>

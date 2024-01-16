@@ -1,16 +1,16 @@
-<?php 
-switch($_GET['table']){
-    case "title":
-        echo "<h3>更新網站標題圖片</h3>";
-    break;
-    case 'mvim':
-        echo "<h3>更換動畫圖片</h3>";
-    break;
-    case 'image':
-        echo "<h3>更新校園映像圖片</h3>";
-    break;
 
-}
+    <?php 
+    switch($_GET['table']){
+        case "animation":
+            echo "<h3>更新動畫縮圖</h3>";
+        break;
+        case 'picture':
+            echo "<h3>更新此圖片</h3>";
+        break;
+        case 'image':
+            echo "<h3>校園映像圖片</h3>";
+        break;
+    }
 ?>
 
 <hr>
@@ -22,8 +22,8 @@ switch($_GET['table']){
             case "animation":
                 echo "<td>更新動畫縮圖</td>";
             break;
-            case 'mvim':
-                echo "<td>動畫圖片</td>";
+            case 'picture':
+                echo "<td>更新此圖片</td>";
             break;
             case 'image':
                 echo "<td>校園映像圖片</td>";
