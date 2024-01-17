@@ -6,7 +6,7 @@
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>Dinosaur Game</title>
         <link rel="stylesheet" href="dino.css">
-        <script src="dino.js"></script>
+        <script src="/din/dino.js"></script>
         <!-- <style>
             body {
                 font-family:'Courier New', Courier, monospace;

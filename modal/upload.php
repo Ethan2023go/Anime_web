@@ -7,13 +7,14 @@
         case 'picture':
             echo "<h3>更新此圖片</h3>";
         break;
-        case 'image':
-            echo "<h3>校園映像圖片</h3>";
+        case 'news':
+            echo "<h3>更新新聞圖片</h3>";
         break;
     }
 ?>
 
 <hr>
+
 <form action="./api/update.php" method="post" enctype="multipart/form-data">
 <table>
     <tr>
@@ -25,8 +26,8 @@
             case 'picture':
                 echo "<td>更新此圖片</td>";
             break;
-            case 'image':
-                echo "<td>校園映像圖片</td>";
+            case 'news':
+                echo "<td>更新新聞圖片</td>";
             break;
         }
     ?>

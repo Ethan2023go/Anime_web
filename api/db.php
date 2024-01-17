@@ -142,7 +142,7 @@ function to($url){
     header("location:$url");
 }
 
-$Acc= new DB('acc');
+
 $Account= new DB('acc');
 $Animation= new DB('animation');
 $News= new DB('news');

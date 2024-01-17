@@ -18,7 +18,7 @@
          <!-- logo -->
         <a href="#"><img class="man" src="./imgs/logo.png" alt="" srcset=""></a>
 
-        <button class="logout" type="button">logout</button>
+        <button onclick="location.href='./api/logout.php'" class="logout" type="button">logout</button>
 
 
         <!-- modal_acc -->
@@ -117,7 +117,7 @@
     });
 
 
-      // login function
+  // login function
   function op(border,content,url){
 	
     $(border).fadeIn()

@@ -16,15 +16,14 @@ if(isset($_FILES['img']['tmp_name'])){
     $_POST['img']=$_FILES['img']['name'];
 }
 
-    if($table != 'account'){
-        $_POST['sh']=($table=='title')?0:1;
-    }
- 
-    // if(!isset($_POST['id'])){
-    //     $_POST['sh']=1;
-    //     $_POST['rank']=$Picture->max('id')+1;
+    // if($table != 'account'){
+    //     $_POST['sh']=($table=='title')?0:1;
     // }
-    
+ 
+    if(!isset($_POST['id'])){
+        $_POST['sh']=1;
+        $_POST['rank']=$Picture->max('id')+1;
+    }
 
 $DB->save($_POST);
 // dd($_POST);

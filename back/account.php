@@ -36,7 +36,7 @@
                 </tr>
                 <?php
 
-                $rows=$Acc->all();
+                $rows=$Account->all();
                 foreach($rows as $row){
                 ?>
                 <tr>

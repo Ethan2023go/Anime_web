@@ -75,7 +75,7 @@
       <!-- iframe自動輪播 -->
        <!-- 大部分影片無法自動輪播 之後處理 -->
       <div class="ifr_box">
-      <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <!-- <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
         
        
         <!-- <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&mute=1&controls=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
@@ -140,18 +140,25 @@
 
 
     <!-- picture -->
+    <!-- 之後加入亂數功能 -->
     <div class="picture">
       <?php
-       $imgs=$Picture->all(['sh'=>1]," order by rank")
+       $imgs=$Picture->all(['sh'=>1]," order by rank");
+       foreach($imgs as $idx => $img){
+        // dd ($img);
       ?>
       <img id="pic_img" src="">
       <div class="option">
-        <button class="btn btn-info" id="btn1" data-img="./imgs/Zelda_mina.png" onclick='changeImg(this.id)'>1</button>
+        <button class="btn btn-info" id="btn1" data-img="./imgs/Zelda_link3.jpg" onclick="changeImg(this.id)">1</button>
         <button class="btn btn-info" id="btn2" data-img="./imgs/FINAL_16.png" onclick=' changeImg(this.id)'>2</button>
         <button class="btn btn-info" id="btn3" data-img="./imgs/Baldurs Gate 3_cha_2.jpg" onclick='changeImg(this.id)'>3</button>
         <button class="btn btn-info" id="btn4" data-img="./imgs/final_family.jpg" onclick='changeImg(this.id)'>4</button>
         <button class="btn btn-info" id="btn5" data-img="./imgs/Alan Wake 2.jpg" onclick='changeImg(this.id)'>5</button>
       </div>
+
+      <?php
+       }
+      ?>
 
     </div>
     <!-- vote-->
@@ -187,15 +194,23 @@
   // 定義儲存上次點擊的id和隱藏狀態
   let tmpId = "";
   let tmpHide = 0;
+  let tmpstring = ""; 
 
   // 更改圖片的函數
   function changeImg(id) {
     // 獲取data-img圖片路徑
     let imgData = document.getElementById(id).dataset.img;
-    console.log(imgData);
+    let img=$(`#${id}`).data('img');
+    
+    // console.log(imgData);
     // console.log(tmpHide);
     // console.log(id);
     // console.log(tmpId);
+
+    $.post({img},()=>{
+        console.log(img);
+    })
+
 
     // 判斷當前id是否與上次點擊相同
     if (id == tmpId) {
@@ -221,10 +236,15 @@
         // 再替換圖片並淡出
         $("#pic_img").fadeOut(2000);
         setTimeout(() => {
-          $("#pic_img").attr("src", `${imgData}`)
-
+          // $("#pic_img").attr("src", `${imgData}`)
+          $("#pic_img").attr("src", `${img}`)
         }, 1000);
         $("#pic_img").fadeIn(2000);
+
+
+        // $("#pic_img").click(function(){
+
+        // })
 
 
       });
@@ -255,6 +275,8 @@
   {
   	$(border).fadeOut();
   }
+
+
   // 
 </script>
 

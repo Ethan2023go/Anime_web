@@ -1,6 +1,6 @@
 <h3>新增圖片選項</h3>
 <hr>
-<form action="./api/add.php" method="post" enctype="multipart/form-data">
+<form action="./api/add_pic.php" method="post" enctype="multipart/form-data">
 <table>
     <tr>
         <td>圖片</td>

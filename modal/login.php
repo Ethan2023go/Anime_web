@@ -41,7 +41,7 @@
             </div>
             <div class="btn-group">
                 <!-- <input type="submit" value="登入" class="btn login1" > -->
-                <button class="btn btn-info login1 mt-2 " onclick="login()">登入</button>
+                <button class="btn btn-info login1 mt-2 " onclick="login_user()">登入</button>
                 <!-- <button class="btn cancel" onclick="back()">回前台</button> -->
                 <!-- <input type="reset" value="清除" class="btn cancel"> -->
             </div>
@@ -53,7 +53,7 @@
 
 <script>
     // 定義登入檢查函數 login()
-    function login() {
+    function login_user() {
 
         // 獲取帳號和密碼輸入框的值
         let acc = $("#acc").val();
@@ -77,7 +77,7 @@
                     if (resp == 1) {
 
                         // 跳轉頁面
-                        location.href = "./back/main.php";
+                        location.href = "./back.php";
 
                         // 否則密碼錯誤    
                     } else {
