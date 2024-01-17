@@ -3,6 +3,7 @@ include_once "db.php";
 
 
 $table=$_POST['table'];
+// echo $table;
 unset($_POST['table']);
 $DB=${ucfirst($table)};
 switch($table){
@@ -16,7 +17,7 @@ if(isset($_FILES['img']['tmp_name'])){
     $_POST['img']=$_FILES['img']['name'];
 }
 
-    if($table != 'account'){
+    if($table!= 'account'){
         $_POST['sh']=($table=='title')?0:1;
     }
  

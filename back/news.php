@@ -42,7 +42,7 @@
                 ?>
                 <tr>
                     <td width="45%">
-                        <img src="./img/<?=$row['img'];?>" style="width:300px;height:30px">
+                        <img src="./imgs/<?=$row['img'];?>" style="width:300px;height:30px">
                     </td>
                     <td width="23%">
                         <input type="text" name="text[]" style="width:90%" value="<?=$row['text'];?>">

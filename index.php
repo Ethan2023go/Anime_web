@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/css.css">
 </head>
 
@@ -73,7 +74,7 @@
     ?>
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
-       <!-- 大部分影片無法自動輪播 之後處理 -->
+       <!-- 大部分影片無法自動輪播 暫時處理 -->
       <div class="ifr_box">
       <!-- <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
         
@@ -140,11 +141,11 @@
 
 
     <!-- picture -->
-    <!-- 之後加入亂數功能 -->
+    <!-- 有空的話再加入亂數功能 -->
     <div class="picture">
       <?php
-       $imgs=$Picture->all(['sh'=>1]," order by rank");
-       foreach($imgs as $idx => $img){
+       //$imgs=$Picture->all(['sh'=>1]," order by rank");
+       //foreach($imgs as $idx => $img){
         // dd ($img);
       ?>
       <img id="pic_img" src="">
@@ -157,7 +158,7 @@
       </div>
 
       <?php
-       }
+       // }
       ?>
 
     </div>
@@ -168,7 +169,29 @@
           <div class="row">
             <div class="co1 vote_title">Everybody Top 10 anime!</div>
 
-            <div class="col-12 vote_opt"></div>
+            <div class="questions col-12 vote_opt">
+            <table>
+             <tr>
+                  <th width="20%">編號</th>
+                  <th width="60%">問卷題目</th>
+                  <th width="20%">投票總數</th>
+              </tr>
+              <?php
+              $ques=$Votes->all(['subject_id'=>0]);
+              foreach($ques as  $key => $que){
+              ?>
+              <tr>
+                  <td><?=$key+1;?></td>
+                  <td><?=$que['text'];?></td>
+                  <td><?=$que['vote'];?></td>
+                  <td>
+          
+              <?php
+                  }
+              ?> 
+             </table>
+
+            </div>
           </div>
         </div>
         <div class="col-8">
@@ -187,6 +210,8 @@
 
   </div>
 </body>
+
+<button onclick="topFunction()" id="ArrowBtn" title="Gotop"><i class="fa-solid fa-arrow-up" style="color: #fffff0;"></i></button>
 
 
 <script>
@@ -246,7 +271,6 @@
 
         // })
 
-
       });
 
       // 重置
@@ -276,8 +300,23 @@
   	$(border).fadeOut();
   }
 
+  //
+  
+  // arrowBtn
+window.onscroll = scrollFunction; //每當畫面捲動觸發一次
 
-  // 
+function scrollFunction() { 
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.getElementById("ArrowBtn").style.display = "block";
+  } else {
+    document.getElementById("ArrowBtn").style.display = "none";
+  }
+}//網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
+
+// 重置scrollTop這個變數的值
+function topFunction() {
+  document.documentElement.scrollTop = 0; 
+}
 </script>
 
 </html>
