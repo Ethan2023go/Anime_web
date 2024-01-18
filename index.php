@@ -198,13 +198,13 @@
           <div class="vote_pic ">
           <?php
 
-           $que=$Votes->find($_GET['id']);
-
+           $que=$Votes->find($que['id']);
+          //  dd($que);
           ?> 
 
           <?php 
           
-          $opts=$Votes->all(['subject_id'=>$_GET['id']]);
+          $opts=$Votes->all(['subject_id'=>$que['id']]);
           foreach($opts as $opt){
               $total=($que['vote']!=0)?$que['vote']:1;
               $rate=round($opt['vote']/$total,2);

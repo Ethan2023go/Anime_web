@@ -20,16 +20,32 @@
         height: 200px;
         background-color: lightcoral;
     }
-</style>
+    .cent{
+        width: 100%;
+        background-color: lightgoldenrodyellow;
+        
+    }
+    .pic_title{
+     width:100%;
+     height: 60px;
+     font-size: 20px;
+     background-color: lightsalmon;
+    }
+    .sumbit{
+     width: 100%;
+     height: 80px;
+     background-color: limegreen;
+    }
 
-<h2>圖片牆</h2>
+    </style>
 
-<div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli">圖片管理</p>
+
+<div style="width:98%; height:70%; margin:auto; border:#666 1px solid;">
+    <p class="pic_title">圖片管理</p>
     <form method="post" action="./api/edit.php">
         <table width="100%" style="text-align: center">
             <tbody>
-                <tr class="yel">
+                <tr class="pic">
                     <td width="70%">圖片系列</td>
                     <td width="10%">顯示</td>
                     <td width="10%">刪除</td>
@@ -46,7 +62,7 @@
                 ?>
                 <tr>
                     <td>
-                        <img src="./imgs/<?=$row['img'];?>" style="width:100px;height:68px">
+                        <img src="./imgs/<?=$row['img'];?>" style="width:130px;height:120px">
                     </td>
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     <td>
@@ -88,7 +104,7 @@
                 <tr>
                     <input type="hidden" name="table" value="<?=$do;?>">
                     <td width="200px"><input type="button" onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')" value="新增圖片"></td>
-                    <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
+                    <td class="sumbit"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
                 </tr>
             </tbody>
         </table>
