@@ -32,9 +32,9 @@
         <a href="#"><img class="man" src="./imgs/logo.png" alt="" srcset=""></a>
         
         <div class="a123">
-        <a class="link" href="">最新消息</a>
-        <a class="link" href="">遊戲畫面鑑賞</a>
-        <a class="link" href="">票選活動</a>
+        <a class="link" href="#news">最新消息</a>
+        <a class="link" href="#pic">最新遊戲展示圖</a>
+        <a class="link" href="#vote">熱門票選活動</a>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +76,7 @@
       <!-- iframe自動輪播 -->
        <!-- 大部分影片無法自動輪播 暫時處理 -->
       <div class="ifr_box">
-      <!-- <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+      <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         
        
         <!-- <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&mute=1&controls=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
@@ -90,7 +90,7 @@
 
 
     <!-- news -->
-    <div class="news">
+    <div class="news" id="news">
       <!-- <div class="xd"></div> -->
       <!-- 為了背景 -->
 
@@ -142,7 +142,7 @@
 
     <!-- picture -->
     <!-- 有空的話再加入亂數功能 -->
-    <div class="picture">
+    <div class="picture" id="pic">
       <?php
        //$imgs=$Picture->all(['sh'=>1]," order by rank");
        //foreach($imgs as $idx => $img){
@@ -163,7 +163,7 @@
 
     </div>
     <!-- vote-->
-    <div class="vote">
+    <div class="vote" id="vote">
       <div class="row">
         <div class="col-4">
           <div class="row">
@@ -196,6 +196,26 @@
         </div>
         <div class="col-8">
           <div class="vote_pic ">
+          <?php
+
+           $que=$Votes->find($_GET['id']);
+
+          ?> 
+
+          <?php 
+          
+          $opts=$Votes->all(['subject_id'=>$_GET['id']]);
+          foreach($opts as $opt){
+              $total=($que['vote']!=0)?$que['vote']:1;
+              $rate=round($opt['vote']/$total,2);
+          
+              echo "<div style='width:95%;display:flex;align-items:center;margin:10px 0'>";
+              echo    "<div style='width:50%'>{$opt['text']}</div>";
+              echo    "<div style='width:".(40*$rate)."%;height:20px;background-color:#ccc'></div>";
+              echo    "<div style='width:10%'>{$opt['vote']}票(".($rate*100)."%)</div>";
+              echo "</div>";
+          }
+          ?>
 
           </div>
         </div>
@@ -312,6 +332,7 @@ function scrollFunction() {
     document.getElementById("ArrowBtn").style.display = "none";
   }
 }//網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
+
 
 // 重置scrollTop這個變數的值
 function topFunction() {

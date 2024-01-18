@@ -40,10 +40,7 @@
                 <input class="form-control mt-2" type="password" name="pw" id="pw">
             </div>
             <div class="btn-group">
-                <!-- <input type="submit" value="登入" class="btn login1" > -->
                 <button class="btn btn-info login1 mt-2 " onclick="login_user()">登入</button>
-                <!-- <button class="btn cancel" onclick="back()">回前台</button> -->
-                <!-- <input type="reset" value="清除" class="btn cancel"> -->
             </div>
         </div>
     </div>

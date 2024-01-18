@@ -11,7 +11,7 @@
     <?php
     $ques=$Votes->all(['subject_id'=>0]);
     foreach($ques as  $key => $que){
-    dd($que);
+    // dd($que);
     ?>
     <tr>
         <td><?=$key+1;?></td>
