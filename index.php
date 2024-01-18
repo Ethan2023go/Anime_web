@@ -29,7 +29,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
       <div class="container-fluid">
-        <a href="#"><img class="man" src="./imgs/logo.png" alt="" srcset=""></a>
+        <a href=""><img class="man" src="./imgs/logo.png" alt="" srcset=""></a>
         
         <div class="a123">
         <a class="link" href="#news">最新消息</a>

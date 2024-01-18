@@ -16,7 +16,7 @@
 
     <div class="top_nav">
          <!-- logo -->
-        <a href="#"><img class="man" src="./imgs/logo.png" alt="" srcset=""></a>
+        <a href="index.php"><img class="man" src="./imgs/logo.png" alt="" srcset=""></a>
 
         <button onclick="location.href='./api/logout.php'" class="logout" type="button">logout</button>
 
