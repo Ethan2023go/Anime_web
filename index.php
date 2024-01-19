@@ -29,7 +29,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
       <div class="container-fluid">
-        <a href=""><img class="man" src="./imgs/logo.png" alt="" srcset=""></a>
+        <a href=""><img class="man" src="./local_pic/logo.png" alt="" srcset=""></a>
         
         <div class="a123">
         <a class="link" href="#news">最新消息</a>
@@ -54,7 +54,7 @@
               </ul>
             </li>
             <li class="login_log">
-              <a class="nav-link bg-danger" onclick="login('#cover','#cvr','./modal/login.php?')" >登入</a>
+              <a class="nav-link bg-danger" onclick="login('#cover','#cvr','./modal/login.php?')">管理者登入</a>
             </li>
           </ul>
           <form class="d-flex ms-3" role="search">
@@ -93,12 +93,19 @@
     <div class="news" id="news">
       <!-- <div class="xd"></div> -->
       <!-- 為了背景 -->
+      <?php   
+         $imgs=$News->all(['sh'=>1]); 
+        //  dd($imgs); 
+      ?>
 
       <div class="card_all">
+        <?php
+      foreach($imgs as $key => $img){
+        ?>
 
         <div class="card2">
           <div class="card_img">
-            <img class="C_img_size" src="./imgs/dark_souls.jpg" alt="">
+            <img class="C_img_size" src="./imgs/<?=$img['img'];?>" alt="">
           </div>
           <div class="card_body">
             大顆壽司
@@ -106,9 +113,9 @@
         </div>
 
 
-        <div class="card2">
+        <!-- <div class="card2">
           <div class="card_img">
-            <img class="C_img_size" src="./imgs/zelda_mark.jpg" alt="">
+            <img class="C_img_size" src="../imgs/" alt="">
           </div>
           <div class="card_body">
             薩神
@@ -117,7 +124,7 @@
 
         <div class="card3">
           <div class="card_img">
-            <img class="C_img_size" src="./imgs/monster_world.jpg" alt="">
+            <img class="C_img_size" src="../imgs/" alt="">
           </div>
           <div class="card_body">
             魔物獵人
@@ -126,14 +133,16 @@
 
         <div class="card4">
           <div class="card_img">
-            <img class="C_img_size" src="./imgs/resident evil4.jpg" alt="">
+            <img class="C_img_size" src="../imgs/" alt="">
           </div>
           <div class="card_body">
             經典惡靈古堡
           </div>
-        </div>
+        </div> -->
 
-
+       <?php
+         }
+        ?>
       </div>
     </div>
 
@@ -150,11 +159,11 @@
       ?>
       <img id="pic_img" src="">
       <div class="option">
-        <button class="btn btn-info" id="btn1" data-img="./imgs/Zelda_link3.jpg" onclick="changeImg(this.id)">1</button>
-        <button class="btn btn-info" id="btn2" data-img="./imgs/FINAL_16.png" onclick=' changeImg(this.id)'>2</button>
-        <button class="btn btn-info" id="btn3" data-img="./imgs/Baldurs Gate 3_cha_2.jpg" onclick='changeImg(this.id)'>3</button>
-        <button class="btn btn-info" id="btn4" data-img="./imgs/final_family.jpg" onclick='changeImg(this.id)'>4</button>
-        <button class="btn btn-info" id="btn5" data-img="./imgs/Alan Wake 2.jpg" onclick='changeImg(this.id)'>5</button>
+        <button class="btn btn-info" id="btn1" data-img="./local_pic/Zelda_link3.jpg" onclick="changeImg(this.id)">1</button>
+        <button class="btn btn-info" id="btn2" data-img="./local_pic/FINAL_16.png" onclick=' changeImg(this.id)'>2</button>
+        <button class="btn btn-info" id="btn3" data-img="./local_pic/Baldurs Gate 3_cha_2.jpg" onclick='changeImg(this.id)'>3</button>
+        <button class="btn btn-info" id="btn4" data-img="./local_pic/final_family.jpg" onclick='changeImg(this.id)'>4</button>
+        <button class="btn btn-info" id="btn5" data-img="./local_pic/Alan Wake 2.jpg" onclick='changeImg(this.id)'>5</button>
       </div>
 
       <?php
