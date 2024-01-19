@@ -54,7 +54,7 @@
               </ul>
             </li>
             <li class="login_log">
-              <a class="nav-link bg-danger" onclick="login('#cover','#cvr','./modal/login.php?')" >登入</a>
+              <a class="nav-link bg-danger" onclick="login('#cover','#cvr','./modal/login.php?')">管理者登入</a>
             </li>
           </ul>
           <form class="d-flex ms-3" role="search">
@@ -93,12 +93,19 @@
     <div class="news" id="news">
       <!-- <div class="xd"></div> -->
       <!-- 為了背景 -->
+      <?php   
+         $imgs=$News->all(['sh'=>1]); 
+        //  dd($imgs); 
+      ?>
 
       <div class="card_all">
+        <?php
+      foreach($imgs as $key => $img){
+        ?>
 
         <div class="card2">
           <div class="card_img">
-            <img class="C_img_size" src="./local_pic/dark_souls.jpg" alt="">
+            <img class="C_img_size" src="./imgs/<?=$img['img'];?>" alt="">
           </div>
           <div class="card_body">
             大顆壽司
@@ -106,9 +113,9 @@
         </div>
 
 
-        <div class="card2">
+        <!-- <div class="card2">
           <div class="card_img">
-            <img class="C_img_size" src="./local_pic/zelda_mark.jpg" alt="">
+            <img class="C_img_size" src="../imgs/" alt="">
           </div>
           <div class="card_body">
             薩神
@@ -117,7 +124,7 @@
 
         <div class="card3">
           <div class="card_img">
-            <img class="C_img_size" src="./local_pic/monster_world.jpg" alt="">
+            <img class="C_img_size" src="../imgs/" alt="">
           </div>
           <div class="card_body">
             魔物獵人
@@ -126,14 +133,16 @@
 
         <div class="card4">
           <div class="card_img">
-            <img class="C_img_size" src="./local_pic/resident evil4.jpg" alt="">
+            <img class="C_img_size" src="../imgs/" alt="">
           </div>
           <div class="card_body">
             經典惡靈古堡
           </div>
-        </div>
+        </div> -->
 
-
+       <?php
+         }
+        ?>
       </div>
     </div>
 
