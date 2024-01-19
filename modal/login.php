@@ -96,7 +96,7 @@
     }
 
     // 定義返回頁面函數 back()
-    function back() {
-        location.href = "index.php"
-    }
+    // function back() {
+    //     location.href = "index.php"
+    // }
 </script>

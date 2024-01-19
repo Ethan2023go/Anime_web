@@ -20,7 +20,7 @@
   margin: auto;
   margin-top: 10px;
   /* align-items: center; */
-  background-image: url(../imgs/background5.png);
+  background-image: url(../local_pic/background5.png);
   box-shadow: 0 0 0 1px #FFDAC8, 0 0 10px rgba(0,0,0,1);
 
 }
@@ -42,7 +42,7 @@ width: 100%;
 .news{
     width: 90%;
     height: 700px;
-    background-image: url(../imgs/age_bg.png);
+    background-image: url(../local_pic/age_bg.png);
     background-size: cover;
     margin: auto;
     margin-top: 60px;
