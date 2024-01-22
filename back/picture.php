@@ -1,30 +1,4 @@
 <style>
-    .modal_acc{
-        position: relative;
-        width: 100%;
-        z-index: 100;
-        background-color: lightgreen;
-    }
-    #cover{
-        width: 33%;
-        height:300px;
-        top:200px;
-        left:33.3%;
-        background-color: lightblue;
-        border-radius: 10px;
-        position: absolute;    
-    }
-    
-    #coverr{
-        width: 100px;
-        height: 200px;
-        background-color: lightcoral;
-    }
-    .cent{
-        width: 100%;
-        background-color: lightgoldenrodyellow;
-        
-    }
     .pic_title{
      width:100%;
      height: 60px;
@@ -36,7 +10,6 @@
      height: 80px;
      background-color: limegreen;
     }
-
     </style>
 
 
@@ -46,7 +19,7 @@
         <table width="100%" style="text-align: center">
             <tbody>
                 <tr class="pic">
-                    <td width="70%">圖片系列</td>
+                    <td width="65%">圖片系列</td>
                     <td width="10%">顯示</td>
                     <td width="10%">刪除</td>
                     <td></td>
@@ -62,7 +35,7 @@
                 ?>
                 <tr>
                     <td>
-                        <img src="./imgs/<?=$row['img'];?>" style="width:130px;height:120px">
+                        <img src="./imgs/<?=$row['img'];?>" style="width:220px;height:120px;margin-bottom:5px">
                     </td>
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     <td>
@@ -99,7 +72,7 @@
                 }
             ?>
         </div>        
-        <table style="margin-top:40px; width:70%;">
+        <table style="margin-top:5px; width:70%;">
             <tbody>
                 <tr>
                     <input type="hidden" name="table" value="<?=$do;?>">

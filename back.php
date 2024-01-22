@@ -1,4 +1,4 @@
-<?php include_once "./api/db.php" ?>
+<?php include_once "./api/db.php"?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +17,18 @@
     <div class="top_nav">
          <!-- logo -->
         <a href="index.php"><img class="man" src="./local_pic/logo.png" alt="" srcset=""></a>
+        
+        .
+
+        <div class="relative">
+        <!-- dash_btn -->
+            <button class="dash_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">dashbord</button>
+        <!--  -->
+
+        <button type="button" id="myBtn" class="navBtn">↴</button>
 
         <button onclick="location.href='./api/logout.php'" class="logout" type="button">logout</button>
+        </div>
 
 
         <!-- modal_acc -->
@@ -32,12 +42,11 @@
   </div>
 
 
-        <!-- dash_btn -->
-        <button class="dash_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">dashbord</button>
-        <!--  -->
 
-        <button type="button" id="myBtn" class="navBtn">↴</button>
+
+        
     </div>
+
     <div class="slide_nav" id="back_nav">
         <div class="row">
             <div class="col ">

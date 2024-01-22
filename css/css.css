@@ -173,23 +173,6 @@ width: 100%;
 	top:300px;
 	left:710px;
 }
-/* #coverr
-{
-	width:70%;
-	min-width:480px;
-	max-width:800px;
-	height:70%;
-    border-radius: 10px;
-	min-height:487px;
-	position:absolute;
-	z-index:5;
-	background:#975f5f;
-	top:470px;
-	left:670px;
-	right:0px;
-	bottom:0px;
-	margin:auto;	
-} */
     #ArrowBtn {
         /* display: none;  */
         position: fixed; 
@@ -205,3 +188,9 @@ width: 100%;
     #ArrowBtn:hover {
         background-color: #516E41; 
       }
+    
+
+
+
+
+

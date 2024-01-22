@@ -1,29 +1,3 @@
-<style>
-    .modal_acc{
-        position: relative;
-        width: 100%;
-        z-index: 100;
-        background-color: lightgreen;
-    }
-    #cover{
-        width: 33%;
-        height:300px;
-        top:200px;
-        left:33.3%;
-        background-color: lightblue;
-        border-radius: 10px;
-        position: absolute;    
-    }
-    
-    #coverr{
-        width: 100px;
-        height: 200px;
-        background-color: lightcoral;
-    }
-    /* #cvr{
-        background-color: lightgoldenrodyellow;
-    }         */
-</style>
 <h2>帳號管理</h2>
 
 <form method="post" action="./api/edit.php">

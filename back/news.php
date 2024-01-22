@@ -1,26 +1,3 @@
-<style>
-    .modal_acc{
-        position: relative;
-        width: 100%;
-        z-index: 100;
-        background-color: lightgreen;
-    }
-    #cover{
-        width: 33%;
-        height:300px;
-        top:200px;
-        left:33.3%;
-        background-color: lightblue;
-        border-radius: 10px;
-        position: absolute;    
-    }
-    
-    #coverr{
-        width: 100px;
-        height: 200px;
-        background-color: lightcoral;
-    }
- </style>
 <h2>最新消息</h2>
 
 <div style="width:99%; height:80%; margin:auto; overflow:auto; border:#666 1px solid;">
