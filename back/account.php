@@ -1,27 +1,39 @@
-<h2>帳號管理</h2>
-
 <form method="post" action="./api/edit.php">
+
+   <table class="add">
+   <input type="hidden" name="table" value="<?=$do;?>">
+       <td class="add_btn">
+        <input style="color:#7D6C46;" type="button" onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')" value="新增管理者帳號">
+        </td>
+    </table>
+
         <table width="100%" style="text-align: center">
             <tbody>
                 <tr class="yel">
-                    <td width="45%">帳號</td>
-                    <td width="45%">密碼</td>
-                    <td width="10%">刪除</td>
+                    <td width="40%">帳號</td>
+                    <td width="40%">密碼</td>
+                    <td width="20%">刪除</td>
                 </tr>
                 <?php
-
-                $rows=$Account->all();
+                
+                $total=$Account->count();
+                $div=8;
+                $pages=ceil($total/$div);
+                $now=$_GET['p']??1;
+                $start=($now-1)*$div;
+                $rows=$Account->all(" limit $start,$div");
                 foreach($rows as $row){
                 ?>
+                
                 <tr>
                     <td>
-                        <input type="text" name="acc[]" style="width:90%" value="<?=$row['acc'];?>">
+                        <input class="form-control mt-2 m-auto" type="text" name="acc[]" style="width:80%" value="<?=$row['acc'];?>">
                          
                     </td>
                     <td>
-                        <input type="password" name="pw[]" value="<?=$row['pw'];?>">
+                        <input class="form-control mt-2 m-auto" type="password" name="pw[]" style="width:70%" value="<?=$row['pw'];?>">
                     </td>
-                    <td>
+                    <td style="width:50px;">
                     <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                     </td>
                 </tr>
@@ -31,12 +43,34 @@
                 ?>
             </tbody>
         </table>
-        <table style="margin-top:40px; width:70%;">
+
+        <div class="cent">
+            
+           <?php
+                if($now>1){
+                    $prev=$now-1;
+                    echo "<a href='?do=$do&p=$prev'> < </a>"; 
+                }
+
+                for($i=1;$i<=$pages;$i++){
+                    $fontsize=($now==$i)?'24px':'16px';
+                    echo "<a href='?do=$do&p=$i' style='font-size:$fontsize'> $i </a>";
+                }
+
+                if($now<$pages){
+                    $next=$now+1;
+                    echo "<a href='?do=$do&p=$next'> > </a>";
+                }
+            ?>
+          </div>        
+        <table style="margin-top:10px; width:100%;">
             <tbody>
-                <tr>
-                    <input type="hidden" name="table" value="<?=$do;?>">
-                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')" value="新增管理者帳號"></td>
-                    <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
+                <tr class="btn_flex">
+
+                    <td class="bottom_btn">
+                        <input class="modify" type="submit" value="修改確定">
+                        <input class="reset_btn" type="reset" value="重置">
+                    </td>
                 </tr>
             </tbody>
         </table>

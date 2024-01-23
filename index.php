@@ -108,7 +108,7 @@
             <img class="C_img_size" src="./imgs/<?=$img['img'];?>" alt="">
           </div>
           <div class="card_body">
-            大顆壽司
+           <?=$img['text'];?>
           </div>
         </div>
 

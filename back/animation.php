@@ -1,6 +1,15 @@
-<h2>動態影片牆</h2>
 <div style="width:99%; height:80%; margin:auto; overflow:auto;">
     <form method="post" action="./api/edit.php">
+
+    <!-- add -->
+    <table class="add">
+    <input type="hidden" name="table" value="<?=$do;?>">
+        <td class="add_btn">
+            <input style="color:#7D6C46" type="button" onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')" value="新增動畫選項">
+        </td>
+    </table>
+
+
         <table width="100%" style="text-align: center">
             <tbody>
                 <tr class="yel">
@@ -34,7 +43,7 @@
                     <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                     </td>
                     <td>
-                    <input type="button" onclick="op('#cover','#cvr','./modal/upload.php?table=<?=$do;?>&id=<?=$row['id'];?>')" value="更新圖片">
+                    <input class="pic_res" type="button" onclick="op('#cover','#cvr','./modal/upload.php?table=<?=$do;?>&id=<?=$row['id'];?>')" value="更新圖片">
                     </td>
                 </tr>
                 <?php
@@ -65,12 +74,14 @@
           </div>        
                
 
-        <table style="margin-top:40px; width:70%;">
+        <table style="margin-top:20px; width:100%;">
             <tbody>
-                <tr>
-                    <input type="hidden" name="table" value="<?=$do;?>">
-                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')" value="新增動畫選項"></td>
-                    <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
+                <tr class="btn_flex">
+
+                  <td class="bottom_btn">
+                  <input class="modify" type="submit" value="修改確定">
+                  <input class="reset_btn" type="reset" value="重置">
+                  </td>
                 </tr>
             </tbody>
         </table>

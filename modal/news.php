@@ -4,11 +4,11 @@
 <table>
     <tr>
         <td>讚圖</td>
-        <td><input type="file" name="img" id=""></td>
+        <td><input class="form-control mb-2" type="file" name="img" id=""></td>
     </tr>
     <tr>
         <td>文字介紹</td>
-        <td><input type="text" name="text" id=""></td>
+        <td><input class="form-control mb-2" type="text" name="text" id=""></td>
     </tr>
 </table>
 <div>
