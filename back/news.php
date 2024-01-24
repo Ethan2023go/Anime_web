@@ -72,7 +72,7 @@
 
 
 
-        <table style="margin-top:20px; width:70%;">
+        <table style="margin-top:15px; width:100%;">
             <tbody>
                 <tr class="btn_flex">
 

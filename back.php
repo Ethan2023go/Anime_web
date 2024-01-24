@@ -35,7 +35,7 @@
     <div class="modal_acc">
     <div id="cover" style="display:none; ">
 		<div id="coverr">
-			<a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;color:aliceblue;font-size:20px;" onclick="cl('#cover')">X</a>
+			<a style="position:absolute; right:5%; top:4px; cursor:pointer; z-index:9999;color:aliceblue;font-size:22px;" onclick="cl('#cover')">X</a>
 			<div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
  		</div>
     </div>

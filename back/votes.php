@@ -1,58 +1,60 @@
-<h2>喜好投票</h2>
+<style>
+    .vote_table {
+        width: 100%;
+        margin-top: 12px;
+        text-align: center;
+    }
+</style>
 
-<fieldset>
-<table>
-    <tr>
-        <th width="10%">編號</th>
-        <th width="60%">問卷題目</th>
-        <th width="10%">投票總數</th>
-        <th width="10%">結果</th>
-    </tr>
-    <?php
-    $ques=$Votes->all(['subject_id'=>0]);
-    foreach($ques as  $key => $que){
-    // dd($que);
-    ?>
-    <tr>
-        <td><?=$key+1;?></td>
-        <td><?=$que['text'];?></td>
-        <td><?=$que['vote'];?></td>
-        <td>
-            <a href='?do=result&id=<?=$que['id'];?>'>結果</a>
-        </td>
-        <td>
 
-    <?php
+<form method="post" action="./api/edit.php">
+    <table class="add">
+        <tr>
+            <input type="hidden" name="table" value="<?= $do; ?>">
+            <td class="add_btn">
+                <input style="color:#7D6C46" type="button" onclick="op('#cover','#cvr','./modal/<?= $do; ?>.php?table=<?= $do; ?>')" value="新增問卷">
+            </td>
+        </tr>
+    </table>
+
+
+    <table class="vote_table">
+        <tr>
+            <th width="15%">編號</th>
+            <th width="40%">問卷題目</th>
+            <th width="15%">投票總數</th>
+            <th width="15%">刪除</th>
+        </tr>
+        <?php
+        $ques = $Votes->all(['subject_id' => 0]);
+        foreach ($ques as  $key => $que) {
+            // dd($que);
+        ?>
+            <tr class="">
+                <td class="td_push"><?= $key + 1; ?></td>
+                <td class="td_push"><?= $que['text']; ?></td>
+                <td class="td_push"><?= $que['vote']; ?></td>
+                <td class="td_push">
+                    <input class="form-check-input" type="checkbox" name="del['id']" value="<?= $que['id']; ?>">
+                    
+                </td>
+            </tr>
+
+        <?php
         }
-    ?> 
-</table>
+        ?>
+    </table>
 
 
-    <legend>新增問卷</legend>
-    <form action="./api/add_que.php" method="post">
-    <div style="display: flex;">
-        <div>問卷名稱</div>
-        <div>
-            <input type="text" name="subject">
-        </div>
-    </div>
-    <div>
-        <div id="opt">選項
-            <input type="text" name="option[]">
-            <input type="button" value="更多" onclick="more()">
-        </div>
+    <table style="margin-top:15px; width:100%;">
+        <tbody>
+            <tr class="btn_flex">
 
-    </div>
-<div class="ct">
-    <input type="submit" value="送出"><input type="reset" value="清空">
-</div>
+                <td class="bottom_btn">
+                    <input class="modify" type="submit" value="修改確定">
+                    <input class="reset_btn" type="reset" value="重置">
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </form>
-</fieldset>
-<script>
-function more(){
-    let opt=`<div id="opt">選項
-                <input type="text" name="option[]">
-            </div>`
-    $("#opt").before(opt);
-}    
-</script>

@@ -209,9 +209,6 @@
 
            $que=$Votes->find($que['id']);
           //  dd($que);
-          ?> 
-
-          <?php 
           
           $opts=$Votes->all(['subject_id'=>$que['id']]);
           foreach($opts as $opt){
