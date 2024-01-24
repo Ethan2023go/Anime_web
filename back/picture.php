@@ -31,9 +31,9 @@
         <table width="100%" style="text-align: center">
             <tbody>
                 <tr class="pic">
-                    <td width="65%">圖片系列</td>
-                    <td width="10%">顯示</td>
-                    <td width="10%">刪除</td>
+                    <td width="58%">圖片系列</td>
+                    <td width="12%">顯示</td>
+                    <td width="12%">刪除</td>
                     <td></td>
                 </tr>
                 <?php
@@ -46,15 +46,15 @@
                 foreach ($rows as $row) {
                 ?>
                     <tr>
-                        <td>
-                            <img src="./imgs/<?= $row['img']; ?>" style="width:220px;height:120px;margin-bottom:5px">
-                        </td>
+                    <td>
+                        <img src="./imgs/<?=$row['img'];?>" style="width:220px;height:120px">
+                    </td>
                         <input type="hidden" name="id[]" value="<?= $row['id']; ?>">
                         <td>
-                            <input type="checkbox" name="sh[]" value="<?= $row['id']; ?>" <?= ($row['sh'] == 1) ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="checkbox" name="sh[]" value="<?= $row['id']; ?>" <?= ($row['sh'] == 1) ? 'checked' : ''; ?>>
                         </td>
                         <td>
-                            <input type="checkbox" name="del[]" value="<?= $row['id']; ?>">
+                            <input class="form-check-input" type="checkbox" name="del[]" value="<?= $row['id']; ?>">
                         </td>
                         <td>
                             <input class="pic_res" type="button" onclick="op('#cover','#cvr','./modal/upload.php?table=<?= $do; ?>&id=<?= $row['id']; ?>')" value="更新此圖片">
@@ -65,36 +65,36 @@
                 ?>
             </tbody>
         </table>
-        <div class="cent">
 
+        <div class="one">
+            
             <?php
-            if ($now > 1) {
-                $prev = $now - 1;
-                echo "<a href='?do=$do&p=$prev'> < </a>";
-            }
+                 if($now>1){
+                     $prev=$now-1;
+                     echo "<a href='?do=$do&p=$prev' style='color:#0089A7;text-decoration:none;'> < &nbsp;</a>"; 
+                 }
+ 
+                 for($i=1;$i<=$pages;$i++){
+                     $fontsize=($now==$i)?'25px':'18px';
+                     echo "<a href='?do=$do&p=$i' style='font-size:$fontsize;text-decoration:none;color:#0089A7;'>  $i &nbsp; </a>";
+                 }
+ 
+                 if($now<$pages){
+                     $next=$now+1;
+                     echo "<a href='?do=$do&p=$next' style='color:#0089A7;text-decoration:none;'> > </a>";
+                 }
+             ?>
+           </div>        
 
-            for ($i = 1; $i <= $pages; $i++) {
-                $fontsize = ($now == $i) ? '24px' : '16px';
-                echo "<a href='?do=$do&p=$i' style='font-size:$fontsize'> $i </a>";
-            }
-
-            if ($now < $pages) {
-                $next = $now + 1;
-                echo "<a href='?do=$do&p=$next'> > </a>";
-            }
-            ?>
-        </div>
-        <table style="margin-top:5px; width:100%;">
+           <table style="margin-top:5px; width:100%;">
             <tbody>
                 <tr class="btn_flex">
-                    <!-- <input type="hidden" name="table" value="<?= $do; ?>">
-                    <td width="200px">
-                        <input type="button" onclick="op('#cover','#cvr','./modal/<?= $do; ?>.php?table=<?= $do; ?>')" value="新增圖片">
-                    </td> -->
+
                     <td class="bottom_btn">
                      <input class="modify" type="submit" value="修改確定">
                      <input class="reset_btn" type="reset" value="重置">
                     </td>
+
                 </tr>
             </tbody>
         </table>

@@ -71,7 +71,7 @@
 }
 .main{
     width: 1000px;
-    height: 670px;
+    height: 685px;
     background-color:#e5f6fa;
     border-style:outset;
     border-width: 5px;
@@ -89,7 +89,7 @@
 }
 .main_top{
     width: 100%;
-    height: 100px;
+    height: 70px;
     /* background-color: lightsalmon; */
     /* background-color: #B6D2E0; */
     background-color:#8FA5B0;
@@ -179,6 +179,16 @@
     color:#FCFCFC;
     font-weight: 700;
 }
+.one{
+    margin-top: 8px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #D0104C; */
+}
+
     
 
     

@@ -34,7 +34,7 @@
                         <input class="form-control mt-2 m-auto" type="password" name="pw[]" style="width:70%" value="<?=$row['pw'];?>">
                     </td>
                     <td style="width:50px;">
-                    <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
+                    <input class="form-check-input" type="checkbox" name="del[]" value="<?=$row['id'];?>">
                     </td>
                 </tr>
                 <input type="hidden" name="id[]" value="<?=$row['id'];?>">
@@ -44,25 +44,25 @@
             </tbody>
         </table>
 
-        <div class="cent">
+        <div class="one">
             
-           <?php
-                if($now>1){
-                    $prev=$now-1;
-                    echo "<a href='?do=$do&p=$prev'> < </a>"; 
-                }
-
-                for($i=1;$i<=$pages;$i++){
-                    $fontsize=($now==$i)?'24px':'16px';
-                    echo "<a href='?do=$do&p=$i' style='font-size:$fontsize'> $i </a>";
-                }
-
-                if($now<$pages){
-                    $next=$now+1;
-                    echo "<a href='?do=$do&p=$next'> > </a>";
-                }
-            ?>
-          </div>        
+            <?php
+                 if($now>1){
+                     $prev=$now-1;
+                     echo "<a href='?do=$do&p=$prev' style='color:#0089A7;text-decoration:none;'> < &nbsp;</a>"; 
+                 }
+ 
+                 for($i=1;$i<=$pages;$i++){
+                     $fontsize=($now==$i)?'25px':'18px';
+                     echo "<a href='?do=$do&p=$i' style='font-size:$fontsize;text-decoration:none;color:#0089A7;'>  $i &nbsp; </a>";
+                 }
+ 
+                 if($now<$pages){
+                     $next=$now+1;
+                     echo "<a href='?do=$do&p=$next' style='color:#0089A7;text-decoration:none;'> > </a>";
+                 }
+             ?>
+           </div>        
         <table style="margin-top:10px; width:100%;">
             <tbody>
                 <tr class="btn_flex">

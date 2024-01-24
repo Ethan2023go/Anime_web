@@ -1,4 +1,4 @@
-<div style="width:99%; height:80%; margin:auto; overflow:auto;">
+<div style="width:99%; height:80%; margin:auto;">
     <form method="post" action="./api/edit.php">
 
     <!-- add -->
@@ -21,7 +21,7 @@
                 </tr>
                 <?php
                 $total=$Animation->count();
-                $div=3;
+                $div=4;
                 $pages=ceil($total/$div);
                 $now=$_GET['p']??1;
                 $start=($now-1)*$div;
@@ -30,17 +30,17 @@
                 ?>
                 <tr>
                     <td width="40%" height="100px">
-                        <img src="./imgs/<?=$row['img'];?>" style="width:210px;height:100px">
+                        <img src="./imgs/<?=$row['img'];?>" style="width:210px;height:100px;margin-bottom:5px">
                     </td>
                     <td width="30%">
                         <input type="text" name="text[]" style="width:90%" value="<?=$row['text'];?>">
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     </td>
                     <td width="7%">
-                        <input type="radio" name="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>
+                        <input class="form-check-input" type="radio" name="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>
                     </td>
                     <td width="7%">
-                    <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
+                    <input class="form-check-input" type="checkbox" name="del[]" value="<?=$row['id'];?>">
                     </td>
                     <td>
                     <input class="pic_res" type="button" onclick="op('#cover','#cvr','./modal/upload.php?table=<?=$do;?>&id=<?=$row['id'];?>')" value="更新圖片">
@@ -53,28 +53,28 @@
              </tbody>
         </table>
  
-         <div class="cent">
+         <div class="one">
             
            <?php
                 if($now>1){
                     $prev=$now-1;
-                    echo "<a href='?do=$do&p=$prev'> < </a>"; 
+                    echo "<a href='?do=$do&p=$prev' style='color:#0089A7;text-decoration:none;'> < &nbsp;</a>"; 
                 }
 
                 for($i=1;$i<=$pages;$i++){
-                    $fontsize=($now==$i)?'24px':'16px';
-                    echo "<a href='?do=$do&p=$i' style='font-size:$fontsize'> $i </a>";
+                    $fontsize=($now==$i)?'25px':'18px';
+                    echo "<a href='?do=$do&p=$i' style='font-size:$fontsize;text-decoration:none;color:#0089A7;'>  $i &nbsp; </a>";
                 }
 
                 if($now<$pages){
                     $next=$now+1;
-                    echo "<a href='?do=$do&p=$next'> > </a>";
+                    echo "<a href='?do=$do&p=$next' style='color:#0089A7;text-decoration:none;'> > </a>";
                 }
             ?>
           </div>        
                
 
-        <table style="margin-top:20px; width:100%;">
+        <table style="width:100%;">
             <tbody>
                 <tr class="btn_flex">
 

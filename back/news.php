@@ -35,10 +35,10 @@
                             <input type="hidden" name="id[]" value="<?= $row['id']; ?>">
                         </td>
                         <td width="10%">
-                            <input type="checkbox" name="sh[]" value="<?= $row['id']; ?>" <?= ($row['sh'] == 1) ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="checkbox" name="sh[]" value="<?= $row['id']; ?>" <?= ($row['sh'] == 1) ? 'checked' : ''; ?>>
                         </td>
                         <td width="10%">
-                            <input type="checkbox" name="del[]" value="<?= $row['id']; ?>">
+                            <input class="form-check-input" type="checkbox" name="del[]" value="<?= $row['id']; ?>">
                         </td>
                         <td>
                             <input class="pic_res" type="button" onclick="op('#cover','#cvr','./modal/upload.php?table=<?= $do; ?>&id=<?= $row['id']; ?>')" value="更新內容">
@@ -50,25 +50,25 @@
             </tbody>
         </table>
         
-        <div class="cent">
+        <div class="one">
             
             <?php
                  if($now>1){
                      $prev=$now-1;
-                     echo "<a href='?do=$do&p=$prev'> < </a>"; 
+                     echo "<a href='?do=$do&p=$prev' style='color:#0089A7;text-decoration:none;'> < &nbsp;</a>"; 
                  }
  
                  for($i=1;$i<=$pages;$i++){
-                     $fontsize=($now==$i)?'24px':'16px';
-                     echo "<a href='?do=$do&p=$i' style='font-size:$fontsize'> $i </a>";
+                     $fontsize=($now==$i)?'25px':'18px';
+                     echo "<a href='?do=$do&p=$i' style='font-size:$fontsize;text-decoration:none;color:#0089A7;'>  $i &nbsp; </a>";
                  }
  
                  if($now<$pages){
                      $next=$now+1;
-                     echo "<a href='?do=$do&p=$next'> > </a>";
+                     echo "<a href='?do=$do&p=$next' style='color:#0089A7;text-decoration:none;'> > </a>";
                  }
              ?>
-           </div>
+           </div>        
 
 
 
