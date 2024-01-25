@@ -35,7 +35,7 @@
                 <td class="td_push"><?= $que['text']; ?></td>
                 <td class="td_push"><?= $que['vote']; ?></td>
                 <td class="td_push">
-                    <input class="form-check-input" type="checkbox" name="del['id']" value="<?= $que['id']; ?>">
+                    <input class="form-check-input" type="checkbox" name="del[]" value="<?= $que['id']; ?>">
                     
                 </td>
             </tr>

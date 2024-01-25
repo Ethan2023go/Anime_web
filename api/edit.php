@@ -11,39 +11,43 @@ if(isset($_POST['id'])){
     }
 }
  */
-foreach($_POST['del'] as $key => $id){
-if($table=="votes"){
-    $vote_tmp= $Votes->all(['subject_id'=>$id['id']]);
-    foreach($vote_tmp['id'] as $vote_id){
-      $DB->del($vote_id);
-    }
-  }
-}
+
+         foreach($_POST['del'] as $key => $id){
+         if($table=="votes"){
+             $vote_tmp= $Votes->all(['subject_id'=>$id]);
+             dd($vote_tmp);
+             foreach($vote_tmp as $vote_id){
+               $DB->del($vote_id );
+             }
+           }
+         }
+        
+       
 
 
 
-foreach($_POST['id'] as  $key => $id){
-    if(isset($_POST['del']) && in_array($id,$_POST['del'])){
-        $DB->del($id);
-    }else{
-        $row=$DB->find($id);
-        if(isset($row['text'])){
-            $row['text']=$_POST['text'][$key];
-        }
-        switch($table){
-            case "animation":
-                $row['sh']=(isset($_POST['sh']) && $_POST['sh']==$id)?1:0;
-            break;
-            case "account":
-                $row['acc']=$_POST['acc'][$key];
-                $row['pw']=$_POST['pw'][$key];
-            break;
-            default:
-                $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
-        }
+// foreach($_POST['id'] as  $key => $id){
+//     if(isset($_POST['del']) && in_array($id,$_POST['del'])){
+//         $DB->del($id);
+//     }else{
+//         $row=$DB->find($id);
+//         if(isset($row['text'])){
+//             $row['text']=$_POST['text'][$key];
+//         }
+//         switch($table){
+//             case "animation":
+//                 $row['sh']=(isset($_POST['sh']) && $_POST['sh']==$id)?1:0;
+//             break;
+//             case "account":
+//                 $row['acc']=$_POST['acc'][$key];
+//                 $row['pw']=$_POST['pw'][$key];
+//             break;
+//             default:
+//                 $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
+//         }
 
-        $DB->save($row);
-    }
-}
+//         $DB->save($row);
+//     }
+// }
 
 // to("../back.php?do=$table");
