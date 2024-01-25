@@ -49,7 +49,7 @@
                 <td><input class="form-control mb-2" type="text" name="text" id=""></td>
             </tr>
         </table>
-</div>
+
 
 <div class="reset">
     <div class="reset_con">
@@ -60,3 +60,4 @@
 </div>
 
 </form>
+</div>

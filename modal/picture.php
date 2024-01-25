@@ -46,7 +46,7 @@
                 </td>
             </tr>
         </table>
-</div>
+
 
 <div class="reset">
     <div class="reset_con">
@@ -57,3 +57,4 @@
 </div>
 
 </form>
+</div>

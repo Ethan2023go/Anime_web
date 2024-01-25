@@ -29,10 +29,11 @@
         border-radius: 0% 0% 0% 15% / 20% 20% 5% 5%;
         box-shadow: 4px 4px rgba(0, 0, 0, 1.5);
     }
-    .form_con{
+
+    .form_con {
         width: 100%;
         display: flex;
-        justify-content: center;      
+        justify-content: center;
     }
 </style>
 <legend>新增動畫選項</legend>
@@ -49,7 +50,7 @@
                 <td><input class="form-control mt-3 mb-3" type="text" name="text" id=""></td>
             </tr>
         </table>
-</div>
+
 
 <div class="reset">
     <div class="reset_con">
@@ -60,3 +61,4 @@
 </div>
 
 </form>
+</div>
