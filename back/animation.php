@@ -53,7 +53,7 @@
              </tbody>
         </table>
  
-         <div class="one">
+         <div class="ani_one">
             
            <?php
                 if($now>1){
