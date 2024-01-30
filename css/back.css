@@ -95,11 +95,11 @@
     background-color:#8FA5B0;
 }
 .man{
-    position: relative;
-    width: 66px;
-    height: 58px;
-    left: 1%;
-    margin: 0;
+    position: relative ;
+    width: 66px ;
+    height: 58px ;
+    left: 1% ;
+    margin: 0 ;
 }
 .relative{
     /* background-color: lightsalmon; */
