@@ -1,4 +1,4 @@
-<?php include_once "./api/db.php"?>
+<?php include_once "./api/db.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,26 +15,25 @@
 </head>
 
 <body>
-<div id="cover" style="display:none; ">
-		<div id="coverr">
-			<a style="position:absolute; right:10px; top:4px; cursor:pointer; z-index:101; color:aliceblue; font-size:25px; font-family:Arial Black;" onclick="cl('#cover')">X</a>
-			<div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:100;"></div>
-		</div>
-	</div>
+  <!-- modal_set -->
+  <div id="cover" style="display:none; ">
+    <div id="coverr">
+      <a style="position:absolute; right:10px; top:4px; cursor:pointer; z-index:101; color:aliceblue; font-size:25px; font-family:Arial Black;" onclick="cl('#cover')">X</a>
+      <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:100;"></div>
+    </div>
+  </div>
+
+
   <div class="all ">
-   
-    <!-- modal_set -->
-
-
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
       <div class="container-fluid">
         <a href=""><img class="man" src="./local_pic/logo.png" alt="" srcset=""></a>
-        
+
         <div class="a123">
-        <a class="link" href="#news">最新消息</a>
-        <a class="link" href="#pic">最新遊戲展示圖</a>
-        <a class="link" href="#vote">熱門票選活動</a>
+          <a class="link" href="#news">最新消息</a>
+          <a class="link" href="#pic">最新遊戲展示圖</a>
+          <a class="link" href="#vote">熱門票選活動</a>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,17 +68,14 @@
 
 
     <!-- animation_wall -->
-    <?php   
-    $row=$Animation->find(['sh'=>1]);
+    <?php
+    $row = $Animation->find(['sh' => 1]);
     ?>
     <div class="animation_wall text-center ">
       <!-- iframe自動輪播 -->
-       <!-- 大部分影片無法自動輪播 暫時處理 -->
+      <!-- 大部分影片無法自動輪播 暫時處理 -->
       <div class="ifr_box">
-      <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        
-       
-        <!-- <iframe class="border border-light mt-1" width="90%" height="100%" src="<?=$row['text'];?>rel=0&autoplay=1&loop=1&mute=1&controls=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        <iframe class="border border-light mt-1" width="90%" height="100%" src="<?= $row['text']; ?>rel=0&autoplay=1&loop=1&&mute=1&controls=0 " title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         <div class="mask">
 
@@ -92,55 +88,27 @@
     <div class="news" id="news">
       <!-- <div class="xd"></div> -->
       <!-- 為了背景 -->
-      <?php   
-         $imgs=$News->all(['sh'=>1]); 
-        //  dd($imgs); 
+      <?php
+      $imgs = $News->all(['sh' => 1]);
+      //  dd($imgs); 
       ?>
 
       <div class="card_all">
         <?php
-      foreach($imgs as $key => $img){
+        foreach ($imgs as $key => $img) {
         ?>
 
-        <div class="card2">
-          <div class="card_img">
-            <img class="C_img_size" src="./imgs/<?=$img['img'];?>" alt="">
+          <div class="card2">
+            <div class="card_img">
+              <img class="C_img_size" src="./imgs/<?= $img['img']; ?>" alt="">
+            </div>
+            <div class="card_body">
+              <?= $img['text']; ?>
+            </div>
           </div>
-          <div class="card_body">
-           <?=$img['text'];?>
-          </div>
-        </div>
 
-
-        <!-- <div class="card2">
-          <div class="card_img">
-            <img class="C_img_size" src="../imgs/" alt="">
-          </div>
-          <div class="card_body">
-            薩神
-          </div>
-        </div>
-
-        <div class="card3">
-          <div class="card_img">
-            <img class="C_img_size" src="../imgs/" alt="">
-          </div>
-          <div class="card_body">
-            魔物獵人
-          </div>
-        </div>
-
-        <div class="card4">
-          <div class="card_img">
-            <img class="C_img_size" src="../imgs/" alt="">
-          </div>
-          <div class="card_body">
-            經典惡靈古堡
-          </div>
-        </div> -->
-
-       <?php
-         }
+        <?php
+        }
         ?>
       </div>
     </div>
@@ -152,9 +120,9 @@
     <!-- 有空的話再加入亂數功能 -->
     <div class="picture" id="pic">
       <?php
-       //$imgs=$Picture->all(['sh'=>1]," order by rank");
-       //foreach($imgs as $idx => $img){
-        // dd ($img);
+      //$imgs=$Picture->all(['sh'=>1]," order by rank");
+      //foreach($imgs as $idx => $img){
+      // dd ($img);
       ?>
       <img id="pic_img" src="">
       <div class="option">
@@ -166,61 +134,61 @@
       </div>
 
       <?php
-       // }
+      // }
       ?>
 
     </div>
     <!-- vote-->
     <div class="vote" id="vote">
       <div class="row">
-        <div class="col-4">
+        <div class="col-5">
           <div class="row">
             <div class="co1 vote_title">Everybody Top 10 anime!</div>
 
             <div class="questions col-12 vote_opt">
-            <table>
-             <tr>
+              <table class="table table-hover">
+                <tr>
                   <th width="20%">編號</th>
                   <th width="60%">問卷題目</th>
                   <th width="20%">投票總數</th>
-              </tr>
-              <?php
-              $ques=$Votes->all(['subject_id'=>0]);
-              foreach($ques as  $key => $que){
-              ?>
-              <tr>
-                  <td><?=$key+1;?></td>
-                  <td><?=$que['text'];?></td>
-                  <td><?=$que['vote'];?></td>
-                  <td>
-          
-              <?php
+                </tr>
+                <?php
+                $ques = $Votes->all(['subject_id' => 0]);
+                foreach ($ques as  $key => $que) {
+                ?>
+                  <tr>
+                    <td><?= $key + 1; ?></td>
+                    <td><?= $que['text']; ?></td>
+                    <td><?= $que['vote']; ?></td>
+                    <td>
+
+                    <?php
                   }
-              ?> 
-             </table>
+                    ?>
+              </table>
 
             </div>
           </div>
         </div>
-        <div class="col-8">
+        <div class="col-7">
           <div class="vote_pic ">
-          <?php
+            <?php
 
-           $que=$Votes->find($que['id']);
-          //  dd($que);
-          
-          $opts=$Votes->all(['subject_id'=>$que['id']]);
-          foreach($opts as $opt){
-              $total=($que['vote']!=0)?$que['vote']:1;
-              $rate=round($opt['vote']/$total,2);
-          
+            $que = $Votes->find($que['id']);
+            //  dd($que);
+
+            $opts = $Votes->all(['subject_id' => $que['id']]);
+            foreach ($opts as $opt) {
+              $total = ($que['vote'] != 0) ? $que['vote'] : 1;
+              $rate = round($opt['vote'] / $total, 2);
+
               echo "<div style='width:95%;display:flex;align-items:center;margin:10px 0'>";
               echo    "<div style='width:50%'>{$opt['text']}</div>";
-              echo    "<div style='width:".(40*$rate)."%;height:20px;background-color:#ccc'></div>";
-              echo    "<div style='width:10%'>{$opt['vote']}票(".($rate*100)."%)</div>";
+              echo    "<div style='width:" . (40 * $rate) . "%;height:20px;background-color:#ccc'></div>";
+              echo    "<div style='width:30%'>{$opt['vote']}票(" . ($rate * 100) . "%)</div>";
               echo "</div>";
-          }
-          ?>
+            }
+            ?>
 
           </div>
         </div>
@@ -244,21 +212,23 @@
   // 定義儲存上次點擊的id和隱藏狀態
   let tmpId = "";
   let tmpHide = 0;
-  let tmpstring = ""; 
+  let tmpstring = "";
 
   // 更改圖片的函數
   function changeImg(id) {
     // 獲取data-img圖片路徑
     let imgData = document.getElementById(id).dataset.img;
-    let img=$(`#${id}`).data('img');
-    
+    let img = $(`#${id}`).data('img');
+
     // console.log(imgData);
     // console.log(tmpHide);
     // console.log(id);
     // console.log(tmpId);
 
-    $.post({img},()=>{
-        console.log(img);
+    $.post({
+      img
+    }, () => {
+      console.log(img);
     })
 
 
@@ -311,38 +281,37 @@
 
 
   // login function
-  function login(border,content,url){
-	
-  $(border).fadeIn()
-	if(content)
-	$(content).fadeIn()
-	if(content&&url)
-	$(content).load(url)
-}
+  function login(border, content, url) {
 
-  function cl(border)
-  {
-  	$(border).fadeOut();
+    $(border).fadeIn()
+    if (content)
+      $(content).fadeIn()
+    if (content && url)
+      $(content).load(url)
+  }
+
+  function cl(border) {
+    $(border).fadeOut();
   }
 
   //
-  
+
   // arrowBtn
-window.onscroll = scrollFunction; //每當畫面捲動觸發一次
+  window.onscroll = scrollFunction; //每當畫面捲動觸發一次
 
-function scrollFunction() { 
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    document.getElementById("ArrowBtn").style.display = "block";
-  } else {
-    document.getElementById("ArrowBtn").style.display = "none";
+  function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      document.getElementById("ArrowBtn").style.display = "block";
+    } else {
+      document.getElementById("ArrowBtn").style.display = "none";
+    }
+  } //網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
+
+
+  // 重置scrollTop這個變數的值
+  function topFunction() {
+    document.documentElement.scrollTop = 0;
   }
-}//網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
-
-
-// 重置scrollTop這個變數的值
-function topFunction() {
-  document.documentElement.scrollTop = 0; 
-}
 </script>
 
 </html>
